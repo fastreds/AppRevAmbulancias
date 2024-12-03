@@ -1578,6 +1578,51 @@ const items = [
         Opcionales: {},
         DetalleLargo: "Descripción de las Cánulas orofaríngeas.",
         Imagen: "url_a_imagen_placeholder"
-    }
+    },
+{
+    "id": 1733252629824,
+    "NombreVisible": "Cateter IV",
+    "Categoria": "Intravenosos",
+    "SubCategoria": "Desechables",
+    "Ubicacion": "Anaquel 1",
+    "tipoCampo": "NoDefinido",
+    "CantidadSugerida": 3,
+    "CantidadMinima": 0,
+    "Estado": "Disponible",
+    "Opcionales": {
+        "Opcion1": {
+            "Nombre": "#24",
+            "Valor": "3",
+            "Tipo": "text"
+        },
+        "Opcion2": {
+            "Nombre": "#22",
+            "Valor": "3",
+            "Tipo": "text"
+        },
+        "Opcion3": {
+            "Nombre": "#20",
+            "Valor": "3",
+            "Tipo": "text"
+        },
+        "Opcion4": {
+            "Nombre": "#18",
+            "Valor": "3",
+            "Tipo": "text"
+        },
+        "Opcion5": {
+            "Nombre": "#16",
+            "Valor": "3",
+            "Tipo": "text"
+        },
+        "Opcion6": {
+            "Nombre": "#14",
+            "Valor": "3",
+            "Tipo": "text"
+        }
+    },
+    "DetalleLargo": "3 cateter por tipo",
+    "Imagen": ""
+}
 ]
 
