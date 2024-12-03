@@ -283,8 +283,7 @@ const items = [
       },
       "DetalleLargo": "Antibiótico de amplio espectro para tratar infecciones graves.",
       "Imagen": "url_a_imagen_placeholder_10"
-    }
-  ]
+    },
 
 
    
