@@ -14,7 +14,7 @@ const  usuarios = [
 
 const items = [
     {
-      "id": 100,
+      "id": 1500,
       "NombreVisible": "Paracetamol",
       "Categoria": "Medicamentos",
       "SubCategoria": "Analgesicos",
