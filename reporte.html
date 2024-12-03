@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Revisión de Inventario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>Reporte de Revisión de Inventario</h2>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Detalles de la Revisión</h5>
+                <p><strong>Revisor:</strong> <span id="reviewer"></span></p>
+                <p><strong>Unidad:</strong> <span id="unit"></span></p>
+                <p><strong>Fecha:</strong> <span id="date"></span></p>
+
+                <h5 class="card-title mt-4">Resultados de la Revisión</h5>
+                <div id="items-list" class="row">
+                    <!-- Los elementos se agregarán dinámicamente aquí -->
+                </div>
+
+                <button id="save-btn-pdf" class="btn btn-primary mt-3">Generar Reporte PDF</button>
+                <button id="print-btn" class="btn btn-primary mt-3 no-print">Imprimir Reporte</button>
+                <button id="email-btn" class="btn btn-primary mt-3 no-print">Email Reporte</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="equipment_array.js"></script>
+    <script>
+        // Recuperar datos de localStorage
+        const savedData = localStorage.getItem("reviewData");
+        const reviewData = savedData ? JSON.parse(savedData) : null;
+// Función para agrupar por UbicacionOriginal y luego por categoria
+function groupByLocationAndCategory(items) {
+    const groupedByLocation = items.reduce((acc, item) => {
+        const location = item.UbicacionOriginal || 'Desconocida';
+        if (!acc[location]) acc[location] = [];
+
+        const category = item.categoria || 'Sin Categoría';
+        const categoryGroup = acc[location].find(group => group.category === category);
+
+        if (!categoryGroup) {
+            acc[location].push({ category, items: [item] });
+        } else {
+            categoryGroup.items.push(item);
+        }
+        return acc;
+    }, {});
+
+    return groupedByLocation;
+}
+
+const groupedItems = groupByLocationAndCategory(reviewData.items);
+const itemsList = document.getElementById('items-list');
+
+// Recorremos las ubicaciones y categorías para mostrar los elementos
+for (const location in groupedItems) {
+    const locationGroup = groupedItems[location];
+
+    // Crear una sección para la ubicación
+    const locationDiv = document.createElement('div');
+    locationDiv.classList.add('col-12', 'mb-4');
+    locationDiv.innerHTML = `<h6 class="bg-secondary text-white p-2 rounded">${location}</h6>`;
+    itemsList.appendChild(locationDiv);
+
+    // Recorrer las categorías dentro de cada ubicación
+    locationGroup.forEach(group => {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.classList.add('col-12', 'mb-3');
+        categoryDiv.innerHTML = `<h7 class="bg-info text-white p-2 rounded">${group.category}</h7>`;
+        itemsList.appendChild(categoryDiv);
+
+        // Mostrar los artículos dentro de la categoría
+        group.items.forEach(item => {
+            const product = items.find(i => i.id === item.id);
+            const suggestedQuantity = product ? product.CantidadSugerida : 0;
+            const foundQuantity = item.found || 0;
+            const isQuantityLow = foundQuantity < suggestedQuantity;
+            const status = isQuantityLow ? 'Falta' : 'Suficiente';
+            const reviewStatus = item.revisado ? 'Revisado' : 'No Revisado';
+
+            const statusClass = isQuantityLow ? 'bg-danger text-white' : 'bg-success text-white';
+            const reviewStatusClass = item.revisado ? 'badge bg-success' : 'badge bg-danger';
+
+            // Crear fila con dos columnas por artículo
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('col-md-3', 'mb-3'); // Estilo de 2 columnas
+
+            // Opcionales: Convertir el objeto en un array de [Nombre, Valor]
+            const opcionales = item.Opcionales ? Object.fromEntries(
+                Object.entries(item.Opcionales).map(([key, opt]) => [opt.Nombre, opt.Valor])
+            ) : {};
+
+            // Crear contenido de la tarjeta
+            let opcionalesContent = '';
+            for (const [nombre, valor] of Object.entries(opcionales)) {
+                opcionalesContent += `<p><strong>${nombre}:</strong> ${valor}</p>`;
+            }
+
+            itemDiv.innerHTML = `
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h6 class="card-title"><strong>${product ? product.NombreVisible : 'Producto no encontrado'}</strong></h6>
+                        <p>
+                            Estado: <span class="badge ${statusClass}">${status}</span><br>
+                            Revisión: <span class="${reviewStatusClass}">${reviewStatus}</span>
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p>Cantidad Encontrada: ${foundQuantity} / ${suggestedQuantity}</p>
+                            </div>
+                        </div>
+                        ${opcionalesContent ? `<div class="mt-3"><h6>Opcionales:</h6>${opcionalesContent}</div>` : ''}
+                    </div>
+                </div>
+            `;
+            itemsList.appendChild(itemDiv);
+        });
+    });
+}
+
+
+
+
+        
+        // Botón para generar el PDF
+        document.getElementById('save-btn-pdf').addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            if (reviewData) {
+                // Título del reporte
+                doc.setFontSize(18);
+                doc.text("Reporte de Revisión de Inventario", 10, 10);
+
+                // Agregar detalles del revisor y unidad
+                const reviewer = reviewData.reviewer;
+                const unit = reviewData.unit;
+                const date = reviewData.date;
+                doc.setFontSize(12);
+                doc.text(`Revisor: ${reviewer} (${unit})`, 10, 20);
+                doc.text(`Fecha: ${date}`, 10, 25);
+
+                // Agregar resultados de la revisión
+                doc.text("\nResultados de la Revisión:", 10, 35);
+
+                reviewData.items.forEach((item, index) => {
+                    // Obtener los detalles del producto desde el array "items" (equipos)
+                    const product = items.find(i => i.id === item.id);
+                    const suggestedQuantity = product ? product.CantidadSugerida : 0;
+                    const foundQuantity = item.found || 0;
+                    const isQuantityLow = foundQuantity < suggestedQuantity;
+                    const status = isQuantityLow ? 'Falta' : 'Suficiente';
+                    const reviewStatus = item.revised ? 'Revisado' : 'No Revisado';
+
+                    const itemText = `${index + 1}. ${product ? product.NombreVisible : 'Producto no encontrado'} - Cantidad sugerida: ${suggestedQuantity}, Cantidad encontrada: ${foundQuantity} - ${status} - ${reviewStatus}`;
+                    doc.text(itemText, 10, 40 + index * 10);
+                });
+
+                // Guardar el PDF
+                doc.save('reporte_revision.pdf');
+            }
+        });
+
+
+        // Botón para imprimir
+        document.getElementById('print-btn').addEventListener('click', () => {
+            // Usar la función de impresión del navegador
+            window.print();
+        });
+
+
+
+        // Botón para email
+        document.getElementById('email-btn').addEventListener('click', () => {
+            // Usar la función de impresión del navegador
+            // Inicializa EmailJS con tu usuario
+            emailjs.init(service_9d9ax9j);
+
+            // Maneja el evento del formulario
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Enviar correo utilizando EmailJS
+                emailjs.sendForm("fastreds@gmail.com", 'tu_plantilla', this)
+                    .then(function (response) {
+                        alert("Correo enviado exitosamente!", response);
+                    }, function (error) {
+                        alert("Error al enviar el correo.", error);
+                    });
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

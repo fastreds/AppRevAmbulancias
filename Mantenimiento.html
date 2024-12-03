@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento de Equipos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+</head>
+<style>
+    body {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        margin-bottom: 0.5rem;
+    }
+
+    .card-title,
+    .card h6 {
+        font-size: 0.9rem;
+    }
+
+    .card p,
+    .badge {
+        margin-bottom: 0.2rem;
+    }
+
+    .card-body {
+        padding: 0.5rem;
+    }
+
+    .container {
+        max-width: 95%;
+    }
+
+    @media print {
+        body {
+            font-size: 0.7rem;
+        }
+
+        .no-print {
+            display: none !important;
+        }
+
+        .card {
+            border: none;
+        }
+    }
+</style>
+
+<body class="p-3">
+
+    <div class="container">
+
+    <h1 class="mb-4">Mantenimiento de Equipos</h1>
+    <table id="equipmentTable" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Subcategoría</th>
+                <th>Ubicación</th>
+                <th>Cantidad Sug.</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <button class="btn btn-success mt-3" id="saveToFile">Guardar en archivo</button>
+    <button type="button" class="btn btn-success mt-3" id="AgregarBtn">Agregar</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Equipo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <!-- Inputs dinámicos -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="saveChanges">Guardar Cambios</button>
+                  
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--- EDITOR JSON-->
+    <div class="modal fade" id="jsonEditorModal" tabindex="-1" aria-labelledby="jsonEditorLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="jsonEditorLabel">Editar JSON</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="jsonEditorContent" class="form-control" rows="15"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="saveJsonChanges">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!--- FIN EDITOR JSON-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="equipment_array.js"></script>
+    <script src="main.js"></script>
+    <script>
+        let table;
+
+
+        $(document).ready(function () {
+            // Inicializa DataTable
+            table = $('#equipmentTable').DataTable({
+                data: items,
+                columns: [
+                    { data: 'id' },
+                    { data: 'NombreVisible' },
+                    { data: 'Categoria' },
+                    { data: 'SubCategoria' },
+                    { data: 'Ubicacion' },
+                    { data: 'CantidadSugerida' },
+                    { data: 'Estado' },
+                    {
+                        data: null,
+                        render: (data) => `
+                            <button class="btn btn-sm btn-primary edit-btn" data-id="${data.id}">Editar</button>
+                            <button class="btn btn-sm btn-danger delete-btn" data-id="${data.id}">Eliminar</button>
+                            <button class="btn btn-primary btn-sm edit-json" data-id="${data.id}">JSON</button>
+
+                        `,
+                    },
+                ],
+            });
+
+            // Botón Agregar
+            $('#AgregarBtn').click(() => {
+                openFormModal(); // Sin datos para agregar nuevo
+            });
+
+            // Evento para guardar cambios
+            $('#saveChanges').click(() => saveChanges());
+
+            // Botón Editar
+            $('#equipmentTable').on('click', '.edit-btn', function () {
+                const id = $(this).data('id');
+                const data = items.find(item => item.id === id);
+                openFormModal(data); // Pasa datos existentes
+            });
+
+            // Botón Eliminar
+            $('#equipmentTable').on('click', '.delete-btn', function () {
+                const id = $(this).data('id');
+                deleteItem(id);
+            });
+
+            // Guardar en archivo
+            $('#saveToFile').click(() => {
+                const blob = new Blob([JSON.stringify(items, null, 2)], { type: 'text/plain' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = 'equipment_data.txt';
+                a.click();
+            });
+        });
+
+        // Abrir el modal de formulario
+        function openFormModal(data = null) {
+            const defaultData = {
+                NombreVisible: "",
+                Categoria: "",
+                SubCategoria: "",
+                Ubicacion: "",
+                CantidadSugerida: 0,
+                Estado: "",
+                DetalleLargo: "",
+                Imagen: "",
+            };
+
+            const formData = data || defaultData;
+
+            // Rellena el formulario
+            $('#editForm').html(`
+                ${generateFormField('NombreVisible', 'Nombre', 'text', formData.NombreVisible)}
+                ${generateCategoryField(formData.Categoria, "Categoria")}
+                ${generateCategoryField(formData.SubCategoria, "SubCategoria")}
+                ${generateCategoryField(formData.Ubicacion, "Ubicacion")}
+                ${generateFormField('CantidadSugerida', 'Cantidad Sugerida', 'number', formData.CantidadSugerida)}
+                ${generateCategoryField(formData.Estado, "Estado")}
+                ${generateFormField('DetalleLargo', 'Detalle Largo', 'textarea', formData.DetalleLargo)}
+                ${generateFormField('Imagen', 'Imagen URL', 'text', formData.Imagen)}
+                ${generateOptionalFields(formData.Opcionales || {})}
+            `);
+
+
+            $('#editModal').data('id', data?.id || null).modal('show');
+        }
+
+
+
+        // Guardar cambios (agregar/editar)
+        function saveChanges() {
+            const id = $('#editModal').data('id');
+            const newOpcionales = {};
+
+            //define los opcionales
+            $('#OpcionalesContainer .optional-field').each(function (index) {
+                const key = `Opcion${index + 1}`;
+                const Nombre = $(this).find('input[type="text"]:first').val();
+                const Tipo = $(this).find('select').val();
+                const Valor = Tipo === 'checkbox'
+                    ? $(this).find('input[type="checkbox"]').is(':checked')
+                    : $(this).find('input[type="text"]:last').val();
+
+                newOpcionales[key] = { Nombre, Valor, Tipo };
+            });
+
+
+            const newItem = {
+                id: id || Date.now(), // Nuevo ID si es un elemento nuevo
+                NombreVisible: $('#NombreVisible').val(),
+
+                Categoria: $('#NuevaCategoria').is(':visible') && $('#NuevaCategoria').val()
+                    ? $('#NuevaCategoria').val()
+                    : $('#Categoria').val(),
+
+                SubCategoria: $('#NuevaSubCategoria').is(':visible') && $('#NuevaSubCategoria').val()
+                    ? $('#NuevaSubCategoria').val()
+                    : $('#SubCategoria').val(),
+
+                Ubicacion: $('#NuevaUbicacion').is(':visible') && $('#NuevaUbicacion').val()
+                    ? $('#NuevaUbicacion').val()
+                    : $('#Ubicacion').val(),
+                  
+                tipoCampo: "NoDefinido",  
+                
+
+                CantidadSugerida: parseInt($('#CantidadSugerida').val()) || 0,
+
+                CantidadMinima: 0,  
+
+                Estado: $('#NuevaEstado').is(':visible') && $('#NuevaEstado').val()
+                    ? $('#NuevaEstado').val()
+                    : $('#Estado').val(),
+
+                Opcionales: newOpcionales,
+
+                DetalleLargo: $('#DetalleLargo').val(),
+                Imagen: $('#Imagen').val(),
+
+                
+            };
+
+            if (id) {
+                // Editar
+                const index = items.findIndex(item => item.id === id);
+                items[index] = newItem;
+            } else {
+                // Agregar nuevo
+                items.push(newItem);
+            }
+
+           
+
+            $('#editModal').modal('hide');
+            table.clear().rows.add(items).draw();
+        }
+
+        ///agregaOpcionales //////////////////////////////////////////////////////////// opcionales
+        function generateOptionalFields(opcionales = {}) {
+            return `
+                <div id="OpcionalesContainer">
+                    ${Object.entries(opcionales).map(([key, { Nombre, Valor, Tipo }]) => `
+                        <div class="optional-field mb-3" data-key="${key}">
+                            <input type="text" class="form-control mb-2" value="${Nombre}" placeholder="Nombre del campo">
+                            <select class="form-select mb-2">
+                                <option value="text" ${Tipo === 'text' ? 'selected' : ''}>Texto</option>
+                                <option value="fecha" ${Tipo === 'fecha' ? 'selected' : ''}>Fecha</option>
+                                <option value="checkbox" ${Tipo === 'Checkbox' ? 'selected' : ''}>Checkbox</option>
+                            </select>
+                            <input type="${Tipo === 'Checkbox' ? 'checkbox' : 'text'}" class="form-control mb-2" value="${Valor}" placeholder="Valor">
+                            <button type="button" class="btn btn-danger btn-sm remove-optional-field">Eliminar</button>
+                        </div>
+                    `).join('')}
+                </div>
+                <button type="button" class="btn btn-primary btn-sm mt-3" id="addOptionalField">Agregar Campo Opcional</button>
+            `;
+        }
+        $('#editForm').on('click', '#addOptionalField', function () {
+            const fieldCount = $('#OpcionalesContainer .optional-field').length + 1;
+            $('#OpcionalesContainer').append(`
+        <div class="optional-field mb-3" data-key="Opcion${fieldCount}">
+            <input type="text" class="form-control mb-2" placeholder="Nombre del campo">
+            <select class="form-select mb-2">
+                <option value="text">Texto</option>
+                <option value="fecha">Fecha</option>
+                <option value="checkbox">Checkbox</option>
+            </select>
+            <input type="text" class="form-control mb-2" placeholder="Valor">
+            <button type="button" class="btn btn-danger btn-sm remove-optional-field">Eliminar</button>
+        </div>
+    `);
+        });
+
+        $('#editForm').on('click', '.remove-optional-field', function () {
+            $(this).closest('.optional-field').remove();
+        });
+
+
+        ////////////////////////// fin de opcionales ////////////////////////////////////////
+        // Eliminar un elemento
+        function deleteItem(id) {
+            const index = items.findIndex(item => item.id === id);
+            if (index !== -1) {
+                items.splice(index, 1);
+                table.row($(`[data-id="${id}"]`).parents('tr')).remove().draw();
+            }
+        }
+
+        // Generar campo de formulario
+        function generateFormField(id, label, type, value) {
+            if (type === 'textarea') {
+                return `
+                    <div class="mb-3">
+                        <label for="${id}" class="form-label">${label}</label>
+                        <textarea class="form-control" id="${id}">${value}</textarea>
+                    </div>
+                `;
+            }
+            return `
+                <div class="mb-3">
+                    <label for="${id}" class="form-label">${label}</label>
+                    <input type="${type}" class="form-control" id="${id}" value="${value}">
+                </div>
+            `;
+        }
+
+        // Generar campo de categoría
+        function generateCategoryField(selectedValue, baseKey) {
+            const categories = [...new Set(items.map(item => item[baseKey]))];
+            return `
+        <div class="mb-3">
+            <label for="${baseKey}" class="form-label">${baseKey}</label>
+            <select class="form-select dynamic-select" id="${baseKey}" data-base-key="${baseKey}">
+                ${categories.map(c => `<option value="${c}" ${c === selectedValue ? 'selected' : ''}>${c}</option>`).join('')}
+                <option value="Otra">Nueva ${baseKey.toLowerCase()}</option>
+            </select>
+            <input type="text" class="form-control mt-2 d-none new-input" id="Nueva${baseKey}" placeholder="Escriba nueva ${baseKey.toLowerCase()}">
+        </div>
+    `;
+        }
+
+        // Escuchar cambios para mostrar/ocultar el campo de texto
+        $('#editForm').on('change', '.dynamic-select', function () {
+            const baseKey = $(this).data('base-key'); // Extrae el identificador único
+            const newInput = $(`#Nueva${baseKey}`);
+            if ($(this).val() === "Otra") {
+                newInput.removeClass('d-none').focus();
+            } else {
+                newInput.addClass('d-none').val(''); // Limpia el valor si vuelve a ser oculto
+            }
+        });
+
+
+        ///////////////////////////// EDITOR JSON ///////////////////////////////////
+
+        $('#equipmentTable').on('click', '.edit-json', function () {
+            const id = $(this).data('id');
+            const item = items.find(item => item.id === id);
+
+            $('#jsonEditorModal').data('id', id).modal('show');
+            $('#jsonEditorContent').val(JSON.stringify(item, null, 4));
+        });
+
+        $('#saveJsonChanges').on('click', function () {
+    const id = $('#jsonEditorModal').data('id');
+    const jsonContent = $('#jsonEditorContent').val();
+
+    try {
+        // Validar el JSON
+        const updatedItem = JSON.parse(jsonContent);
+
+        // Buscar y actualizar el elemento
+        const index = items.findIndex(item => item.id === id);
+        if (index > -1) {
+            items[index] = updatedItem;
+        }
+
+        // Cerrar el modal y actualizar la tabla
+        $('#jsonEditorModal').modal('hide');
+        table.clear().rows.add(items).draw();
+
+        notificar('JSON actualizado correctamente.');
+    } catch (error) {
+        notificar('El JSON no es válido: ' + error.message);
+    }
+});
+
+
+
+    </script>
+
+</body>
+
+</html>

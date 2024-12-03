@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revisión de Equipos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<!-- Revisión de Equipos Navigation --> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container-fluid">
+    <!-- Navbar Brand -->
+    <a class="navbar-brand" href="#">Revisión de Equipos</a>
+
+    <!-- Navbar Toggler (for mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Mantenimiento.html">Mantenimiento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#revision">Revisión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="reporte.html">Reportes</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-outline-light nav-link" onclick="resetReview()">Nueva Revisión</button>
+        </li>
+      </ul>
+
+      <!-- Information Bar -->
+      <span class="navbar-text ms-3 text-light" id="reviewDataSpan">
+        <!-- Dynamic content will be inserted here -->
+      </span>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container mt-4">
+
+     <!-- Inicio de Revisión -->
+  <div id="start-section">
+    <div class="mb-3">
+      <label for="reviewer" class="form-label">Nombre del Revisor</label>
+      <select id="reviewer" class="form-select">
+        <option value="" disabled selected>Seleccione un revisor</option>
+        <!-- Opciones generadas con JavaScript -->
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="unit" class="form-label">Unidad/Ambulancia</label>
+      <select id="unit" class="form-select">
+        <option value="" disabled selected> Bodega o Ambulancia</option>
+        <!-- Opciones generadas con JavaScript -->
+      </select>
+    </div>
+    <button id="start-btn" class="btn btn-primary w-100">Iniciar Revisión</button>
+  </div>
+
+    <!-- Selección de Ubicaciones -->
+    <div id="locations-section" class="d-none">
+      
+      <h3>Ubicaciones  <button id="go-to-summary" class="btn btn-primary w-100 mt-3">Ir al Resumen</button></h3>
+      <div id="locations-list" class="list-group"></div>
+     
+    </div>
+
+    <!-- Revisión de Equipos -->
+    <div id="review-section" class="d-none">
+      <h3 class="position-sticky top-0 bg-light p-3">Revisando: <span id="current-location"></span></h3>
+      <button id="back-to-locations" class="btn btn-secondary w-15 mt-3">Volver a Ubicaciones</button>
+      <p></p>
+      <div id="equipment-list"></div>
+    </div>
+
+
+
+<!-- Resumen de Revisión -->
+<div id="summary-section" class="d-none">
+  <h3>Resumen de Revisión</h3>
+
+  <button id="back-to-locations2" class="btn btn-secondary w-25 mt-3">Volver a Ubicaciones</button>
+  <button id="save-btn" class="btn btn-success w-25 mt-3">Guardar y Finalizar</button>
+  <button id="reporte-btn" class="btn btn-success w-25 mt-3">Reporte</button>
+  <button id="reporteFilaDatatable-btn" class="btn btn-success w-25 mt-3">Reporte DataTable</button>
+  <br>
+
+  <!-- Filtros de Categoría, SubCategoría y Ubicación -->
+  <div class="mb-3">
+    <select id="filter-category" class="form-select" onchange="filterSummary()">
+      <option value="">Filtrar por Categoría</option>
+      <!-- Opciones dinámicas de Categorías -->
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <select id="filter-subcategory" class="form-select" onchange="filterSummary()">
+      <option value="">Filtrar por SubCategoría</option>
+      <!-- Opciones dinámicas de Subcategorías -->
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <select id="filter-location" class="form-select" onchange="filterSummary()">
+      <option value="">Filtrar por Ubicación</option>
+      <!-- Opciones dinámicas de Ubicaciones -->
+    </select>
+  </div>
+
+  <!-- Botón para mostrar solo productos en alerta -->
+  <button id="filter-alert" class="btn btn-warning w-100 mt-3" onclick="filterAlert()">
+    Mostrar solo Equipos en alerta
+  </button>
+
+  <!-- Resumen Listado -->
+  <div id="summary-list" class="row mt-3"></div>
+
+  </div>
+</div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="equipment_array.js"></script>
+  <script src="revision.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
