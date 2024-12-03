@@ -9,7 +9,7 @@ const  usuarios = [
   const  bodegas = [
     { bodegaId: "b1013", bodegaNombre: "Ambulancia 1013" },
     { bodegaId: "b782", bodegaNombre: "Ambulancia 782" },
-    { bodegaId: "bOficinaParamed", bodegaNombre: "Bodega Oficina de Paramedicos" } ]
+    { bodegaId: "bOficinaParamed", bodegaNombre: "Bodega Oficina de Paramedicos" } ];
   
 
 const items = [
