@@ -1,19 +1,8 @@
 const  usuarios = [
     { userId: "MarcosOA", NombreUsuario: "Marcos Ortega", emailUsuario: "fastreds@gmail.com" },
-    { userId: "AnaGM", NombreUsuario: "Ana Gómez", emailUsuario: "ana.gomez@example.com" },
-    { userId: "LuisRP", NombreUsuario: "Luis Ramírez", emailUsuario: "luis.ramirez@example.com" },
-    { userId: "CarlosMV", NombreUsuario: "Carlos Martínez", emailUsuario: "carlos.martinez@example.com" },
-    { userId: "SofiaRZ", NombreUsuario: "Sofia Rodríguez", emailUsuario: "sofia.rodriguez@example.com" },
-    { userId: "PedroAG", NombreUsuario: "Pedro Álvarez", emailUsuario: "pedro.alvarez@example.com" },
-    { userId: "LuciaC", NombreUsuario: "Lucía Castro", emailUsuario: "lucia.castro@example.com" },
-    { userId: "JavierJD", NombreUsuario: "Javier Jiménez", emailUsuario: "javier.jimenez@example.com" },
-    { userId: "RaulFT", NombreUsuario: "Raul Fernández", emailUsuario: "raul.fernandez@example.com" },
-    { userId: "ElenaMP", NombreUsuario: "Elena Pérez", emailUsuario: "elena.perez@example.com" },
-    { userId: "RicardoLQ", NombreUsuario: "Ricardo López", emailUsuario: "ricardo.lopez@example.com" },
-    { userId: "ClaraMD", NombreUsuario: "Clara Díaz", emailUsuario: "clara.diaz@example.com" },
-    { userId: "OscarPS", NombreUsuario: "Óscar Pérez", emailUsuario: "oscar.perez@example.com" },
-    { userId: "MarinaBB", NombreUsuario: "Marina Bravo", emailUsuario: "marina.bravo@example.com" },
-    { userId: "DiegoJN", NombreUsuario: "Diego Navarro", emailUsuario: "diego.navarro@example.com" }
+    { userId: "AllanJJ", NombreUsuario: "Allan Jiménez", emailUsuario: "ALLAN.JIMENEZALPIZAR@ucr.ac.cr" },
+    { userId: "JimmyM", NombreUsuario: "Jimmy Segura M", emailUsuario: "jimmy.segura@ucr.ac.cr " }
+
   ];
 
 
@@ -297,8 +286,7 @@ const items = [
     }
   ]
 
-      
-   /* const items = [
+
    
    {
 
@@ -1594,5 +1582,3 @@ const items = [
     }
 ]
 
-
-*/
