@@ -1,7 +1,7 @@
 
-var jsonModelo = "equipment_array.json"; 
+var jsonModelo = "equipment_array.json";
 
-// Función para cargar y leer el archivo JSON de manera síncrona.
+// Función para cargar y leer el archivo JSON de manera síncrona
 function cargarItemsSinc() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', jsonModelo, false);  // `false` hace que la solicitud sea síncrona

@@ -18,7 +18,6 @@ const reviewerInput = document.getElementById("reviewer");
 const unitInput = document.getElementById("unit");
 
 
-
 const  usuarios = [
   { userId: "MarcosOA", NombreUsuario: "Marcos Ortega", emailUsuario: "fastreds@gmail.com" },
   { userId: "AllanJJ", NombreUsuario: "Allan Jiménez", emailUsuario: "ALLAN.JIMENEZALPIZAR@ucr.ac.cr" },
