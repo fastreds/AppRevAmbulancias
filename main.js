@@ -1,4 +1,39 @@
 
+var jsonModelo = "equipment_array.json"; 
+
+// Función para cargar y leer el archivo JSON de manera síncrona.
+function cargarItemsSinc() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', jsonModelo, false);  // `false` hace que la solicitud sea síncrona
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    try {
+        xhr.send();  // Envía la solicitud
+        if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText);  // Procesar la respuesta JSON
+            console.log("Items generados desde JSON:", data);
+            return data;
+        } else {
+            console.error('Error al cargar el archivo JSON:', xhr.statusText);
+        }
+    } catch (error) {
+        console.error('Error al cargar el archivo JSON:', error);
+    }
+}
+
+// Llamar a la función para cargar los items
+function obtenerItemsSinc() {
+    const items = cargarItemsSinc();  // Llama a la función síncrona
+    console.log("Items obtenidos:", items);
+    return items;  // Retorna los items cargados
+}
+
+// Obtener los items
+const items = obtenerItemsSinc();  // Aquí obtienes los items de manera síncrona
+
+
+
+
 ////////////////////////////////   toastify     //////////////////////////////////
 
 // <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -33,6 +68,60 @@ function notificar(textRecived) {
   }
 
   //////////////////    fin toastify /////////////////////////////
+
+
+
+///////////////// enviar correo generico ////////////////////
+
+const scriptURLCorreos = "https://script.google.com/macros/s/AKfycbw6I6TcDab7w3qiXrGPRpr4FbnUxdK6kqPsIWVi6cohcwBPlC02NVLH1TVa6ylp80UJzA/exec"; 
+
+
+ function sendEmail(email, subject, message) {
+  const data = {
+    email: email,
+    subject: subject,
+    message: message,
+  };
+
+  try {
+    const response =  fetch(scriptURLCorreos, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+    });
+    const result =  response.json();
+    if (result.success) {
+      alert("Correo enviado con éxito.");
+    } else {
+      throw new Error(result.error || "Error desconocido.");
+    }
+  } catch (error) {
+    alert("Error al enviar el correo: " + error.message);
+  }
+}
+
+//sendEmail("fastreds@gmail.com", "test", "enviar el correo") ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
   ///////////////////////////////////bootstrap ///////////////////////////////////////

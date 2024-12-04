@@ -17,15 +17,30 @@ const saveBtn = document.getElementById("save-btn");
 const reviewerInput = document.getElementById("reviewer");
 const unitInput = document.getElementById("unit");
 
+
+
+const  usuarios = [
+  { userId: "MarcosOA", NombreUsuario: "Marcos Ortega", emailUsuario: "fastreds@gmail.com" },
+  { userId: "AllanJJ", NombreUsuario: "Allan Jiménez", emailUsuario: "ALLAN.JIMENEZALPIZAR@ucr.ac.cr" },
+  { userId: "JimmyM", NombreUsuario: "Jimmy Segura M", emailUsuario: "jimmy.segura@ucr.ac.cr " }
+
+];
+
+
+const  bodegas = [
+  { bodegaId: "b1013", bodegaNombre: "Ambulancia 1013" },
+  { bodegaId: "b782", bodegaNombre: "Ambulancia 782" },
+  { bodegaId: "bOficinaParamed", bodegaNombre: "Bodega Oficina de Paramedicos" } ]
+
+
 let reviewData = [];
 let currentLocation = "";
 
 
-
-  
+ 
 usuarios.forEach(user => {
   const option = document.createElement('option');
-  option.value = user.userId;
+  option.value = user.userId;                  
   option.textContent = user.NombreUsuario;
   reviewerInput.appendChild(option);
 });
@@ -70,17 +85,6 @@ startBtn.addEventListener("click", () => {
 
 
 
-// Función para mostrar datos en el nav 
-function ActualizaBarradeInfomracion() {
-  const spanElement = document.getElementById('reviewDataSpan');
-
-  // Verificar que reviewer y unit no estén vacíos
-  if (!reviewData.reviewer || !reviewData.unit) return;
-
-  // Crear un mensaje legible para mostrar
-  const message = `${reviewData.reviewer} (${reviewData.unit}) - ${reviewData.date}`;
-  spanElement.textContent = message;
-}
 
 
 
@@ -185,7 +189,7 @@ function attachOptionalListeners() {
 
             if (loadReviewData()) {
               renderLocations(); // Renderiza las ubicaciones cargadas
-              updateProgress(); // Actualiza la barra de progreso
+
             }
 
             
@@ -365,7 +369,13 @@ saveBtn.addEventListener("click", () => {
     console.error('Error al enviar los datos:', error);
   });
 
-  // notificar("Revisión guardada exitosamente.");
+  notificar("Revisión guardada exitosamente.");
+
+  //// enviar correo de confirmacion
+
+  sendEmail("fastreds@gmail.com", "Revisión guardada exitosamente.", "enviar el correo") ;
+
+
 
 
 });
@@ -376,7 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startSection.classList.add("d-none");
     locationsSection.classList.remove("d-none");
     renderLocations(); // Renderiza las ubicaciones cargadas
-    updateProgress(); // Actualiza la barra de progreso
+
   }
 });
 
@@ -567,52 +577,6 @@ function resetReview() {
     localStorage.removeItem("reviewData");
     location.reload();
   }
-}
-
-
-
-function updateProgress() {
-  const totalItems = reviewData.items && reviewData.items.length ? reviewData.items.length : 0;
-  const reviewedItems = reviewData.items.filter(item => item.revisado).length;
-
-
-
-  // Calcular el porcentaje de progreso
-  const progressPercentage = totalItems ? (reviewedItems / totalItems) * 100 : 0;
-
-  // Crear el contenedor de la barra de progreso si no existe
-  const progressContainer = document.getElementById("progress");
-
-  if (!progressContainer) {
-
-    return; // Salir de la función si no existe
-  }
-
-
-  // Si no existe el contenedor, lo creamos
-  if (!progressContainer) {
-    const progressDiv = document.createElement("div");
-    progressDiv.id = "progress";
-    progressDiv.className = "progress mt-3"  // Barra de progreso de Bootstrap
-    progressDiv.innerHTML = `
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: ${progressPercentage}%" aria-valuenow="${progressPercentage}" aria-valuemin="0" aria-valuemax="100">
-        </div>
-      `;
-    locationsSection.prepend(progressDiv);  // Insertar la barra al principio
-  } else {
-    const progressBar = progressContainer.querySelector(".progress-bar");
-    progressBar.style.width = `${progressPercentage}%`;  // Actualizar el ancho de la barra
-    progressBar.setAttribute("aria-valuenow", progressPercentage);  // Actualizar valor para accesibilidad
-  }
-
-  // Si deseas incluir el texto de progreso en la barra
-  // Esto es opcional, si prefieres que solo se vea la barra sin texto
-  const progressBar = progressContainer.querySelector(".progress-bar");
-  progressBar.setAttribute("aria-valuenow", progressPercentage);
-  progressBar.innerHTML = `${Math.round(progressPercentage)}%`;  // Texto en la barra
-
-  // Llamar a la función para actualizar el contenido barra 
-  ActualizaBarradeInfomracion();
 }
 
 

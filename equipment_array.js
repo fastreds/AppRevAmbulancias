@@ -2,6 +2,7 @@ const  usuarios = [
     { userId: "MarcosOA", NombreUsuario: "Marcos Ortega", emailUsuario: "fastreds@gmail.com" },
     { userId: "AllanJJ", NombreUsuario: "Allan Jiménez", emailUsuario: "ALLAN.JIMENEZALPIZAR@ucr.ac.cr" },
     { userId: "JimmyM", NombreUsuario: "Jimmy Segura M", emailUsuario: "jimmy.segura@ucr.ac.cr " }
+    
 
   ];
 
@@ -9,7 +10,8 @@ const  usuarios = [
   const  bodegas = [
     { bodegaId: "b1013", bodegaNombre: "Ambulancia 1013" },
     { bodegaId: "b782", bodegaNombre: "Ambulancia 782" },
-    { bodegaId: "bOficinaParamed", bodegaNombre: "Bodega Oficina de Paramedicos" } ];
+    { bodegaId: "bOficinaParamed", bodegaNombre: "Bodega Oficina de Paramedicos" },
+    { bodegaId: "CarroEMerOBS", bodegaNombre: "CArro de Paro de OBS" } ];
   
 
 const items = [

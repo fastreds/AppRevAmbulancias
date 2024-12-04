@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
 </head>
 <style>
+    
     body {
         font-size: 0.8rem;
     }
@@ -54,49 +55,50 @@
 
     <div class="container">
 
-    <h1 class="mb-4">Mantenimiento de Equipos</h1>
-    <table id="equipmentTable" class="table table-striped" style="width:100%">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Categoría</th>
-                <th>Subcategoría</th>
-                <th>Ubicación</th>
-                <th>Cantidad Sug.</th>
-                <th>Estado</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+        <h1 class="mb-4">Mantenimiento de Equipos</h1>
+        <table id="equipmentTable" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Subcategoría</th>
+                    <th>Ubicación</th>
+                    <th>Cantidad Sug.</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
 
-    <button class="btn btn-success mt-3" id="saveToFile">Guardar en archivo</button>
-    <button type="button" class="btn btn-success mt-3" id="AgregarBtn">Agregar</button>
+        <button class="btn btn-success mt-3" id="saveToFile">Guardar en archivo</button>
+        <button type="button" class="btn btn-success mt-3" id="AgregarBtn">Agregar</button>
+        <button id="btn_github" class="btn btn-warning mt-3"> GitHub</button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Editar Equipo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="editForm">
-                        <!-- Inputs dinámicos -->
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="saveChanges">Guardar Cambios</button>
-                  
+        <!-- Modal -->
+        <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Editar Equipo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editForm">
+                            <!-- Inputs dinámicos -->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="saveChanges">Guardar Cambios</button>
 
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <!--- EDITOR JSON-->
     <div class="modal fade" id="jsonEditorModal" tabindex="-1" aria-labelledby="jsonEditorLabel" aria-hidden="true">
@@ -112,24 +114,36 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-primary" id="saveJsonChanges">Guardar Cambios</button>
+
                 </div>
             </div>
         </div>
     </div>
 
-     <!--- FIN EDITOR JSON-->
+    <!--- FIN EDITOR JSON-->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
-    <script src="equipment_array.js"></script>
     <script src="main.js"></script>
     <script>
+
+
+
+
         let table;
+
+        //ejemplo 3 datos
+        //items = [{"id":2,"NombreVisible":"Tubo endotraqueal #5","Categoria":"Oxigenoterapia","SubCategoria":"Oxigenación","Ubicacion":"Botiquín","tipoCampo":"Numerico","CantidadSugerida":4,"CantidadMinina":2,"Estado":"En buen estado","Opcionales":{},"DetalleLargo":"Descripción del Tubo endotraqueal #5.","Imagen":"url_a_imagen_placeholder"},{"id":3,"NombreVisible":"Manta térmica","Categoria":"Equipo de Trauma","SubCategoria":"Inmovilización","Ubicacion":"Anaquel 2","tipoCampo":"Numerico","CantidadSugerida":1,"CantidadMinina":1,"Estado":"Disponible","Opcionales":{},"DetalleLargo":"Descripción del Manta térmica.","Imagen":"url_a_imagen_placeholder"},{"id":4,"NombreVisible":"Guantes de látex","Categoria":"Varios","SubCategoria":"Instrumentos","Ubicacion":"Anaquel 1","tipoCampo":"Numerico","CantidadSugerida":5,"CantidadMinina":3,"Estado":"En buen estado","Opcionales":{},"DetalleLargo":"Descripción del Guantes de látex.","Imagen":"url_a_imagen_placeholder"}];
 
 
         $(document).ready(function () {
+
+
+
+
+
             // Inicializa DataTable
             table = $('#equipmentTable').DataTable({
                 data: items,
@@ -251,13 +265,13 @@
                 Ubicacion: $('#NuevaUbicacion').is(':visible') && $('#NuevaUbicacion').val()
                     ? $('#NuevaUbicacion').val()
                     : $('#Ubicacion').val(),
-                  
-                tipoCampo: "NoDefinido",  
-                
+
+                tipoCampo: "NoDefinido",
+
 
                 CantidadSugerida: parseInt($('#CantidadSugerida').val()) || 0,
 
-                CantidadMinima: 0,  
+                CantidadMinima: 0,
 
                 Estado: $('#NuevaEstado').is(':visible') && $('#NuevaEstado').val()
                     ? $('#NuevaEstado').val()
@@ -268,7 +282,7 @@
                 DetalleLargo: $('#DetalleLargo').val(),
                 Imagen: $('#Imagen').val(),
 
-                
+
             };
 
             if (id) {
@@ -280,7 +294,7 @@
                 items.push(newItem);
             }
 
-           
+
 
             $('#editModal').modal('hide');
             table.clear().rows.add(items).draw();
@@ -393,32 +407,145 @@
         });
 
         $('#saveJsonChanges').on('click', function () {
-    const id = $('#jsonEditorModal').data('id');
-    const jsonContent = $('#jsonEditorContent').val();
+            const id = $('#jsonEditorModal').data('id');
+            const jsonContent = $('#jsonEditorContent').val();
 
-    try {
-        // Validar el JSON
-        const updatedItem = JSON.parse(jsonContent);
+            try {
+                // Validar el JSON
+                const updatedItem = JSON.parse(jsonContent);
 
-        // Buscar y actualizar el elemento
-        const index = items.findIndex(item => item.id === id);
-        if (index > -1) {
-            items[index] = updatedItem;
-        }
+                // Buscar y actualizar el elemento
+                const index = items.findIndex(item => item.id === id);
+                if (index > -1) {
+                    items[index] = updatedItem;
+                }
 
-        // Cerrar el modal y actualizar la tabla
-        $('#jsonEditorModal').modal('hide');
-        table.clear().rows.add(items).draw();
+                // Cerrar el modal y actualizar la tabla
+                $('#jsonEditorModal').modal('hide');
+                table.clear().rows.add(items).draw();
 
-        notificar('JSON actualizado correctamente.');
-    } catch (error) {
-        notificar('El JSON no es válido: ' + error.message);
-    }
-});
+                notificar('JSON actualizado correctamente.');
+            } catch (error) {
+                notificar('El JSON no es válido: ' + error.message);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="module">
+
+        ////////////////////// gestion btn giyhub  /////////////////
+        import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('btn_github').addEventListener('click', async () => {
+                const confirmAction = confirm("¿Deseas continuar con la operación en GitHub?");
+                if (!confirmAction) {
+                    alert("Operación cancelada por el usuario.");
+                    return;
+                }
+
+                // Configuración inicial
+                const token = "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";
+                const owner = "fastreds";
+                const repo = "AppRevAmbulancias";
+                const fileName = "equipment_array.json"; // Archivo JSON
+
+                const octokit = new Octokit({ auth: token });
+
+                console.log(items);
+
+                try {
+                    // Consulta el archivo en el repositorio
+                    let fileSha = null;
+
+                    try {
+                        const { data } = await octokit.repos.getContent({
+                            owner,
+                            repo,
+                            path: fileName,
+                        });
+                        fileSha = data.sha; // Obtener el SHA para actualizar el archivo
+                        console.log("Archivo encontrado:", data);
+                    } catch (error) {
+                        if (error.status === 404) {
+                            console.log("Archivo no encontrado. Se creará uno nuevo.");
+                        } else {
+                            throw error;
+                        }
+                    }
+
+                    // Obtener el contenido de `items` desde localStorage
+                    // const items = localStorage.getItem("items");
+                    if (!items) {
+                        alert("No hay datos disponibles en localStorage con clave 'items'.");
+                        return;
+                    }
+
+
+                    function recorrerRecursivamente(items) {
+
+                        // Función para recorrer el array y crear el objeto JSON
+                        function crearJSON(item) {
+                            if (Array.isArray(item)) {
+                                return item.map(crearJSON); // Si el item es un array, recursivamente aplicar la función a cada elemento
+                            } else if (typeof item === 'object' && item !== null) {
+                                const result = {};
+                                for (const key in item) {
+                                    if (item.hasOwnProperty(key)) {
+                                        result[key] = crearJSON(item[key]); // Recursión en las propiedades de objetos
+                                    }
+                                }
+                                return result;
+                            }
+                            return item; // Si es un valor primitivo, simplemente devolverlo
+                        }
+
+                        // Convertir el array original en una estructura JSON
+                        const jsonStructure = JSON.stringify(crearJSON(items));
+
+                        // Asegurarse de que la cadena JSON esté correctamente codificada en UTF-8
+                        const utf8Json = unescape(encodeURIComponent(jsonStructure));
+
+                        // Codificar la estructura JSON en Base64
+                        const base64Encoded = btoa(utf8Json);
+
+                        return base64Encoded;
+                    }
+
+
+                    const resultadoBase64 = recorrerRecursivamente(items);
+                    console.log(resultadoBase64);
+
+
+
+                    // Crear o actualizar el archivo
+                    const result = await octokit.repos.createOrUpdateFileContents({
+                        owner,
+                        repo,
+                        path: fileName,
+                        message: fileSha ? "Actualizar archivo JSON" : "Crear archivo JSON",
+                        content: resultadoBase64, // Contenido codificado en Base64
+                        sha: fileSha, // Solo para actualizar
+                    });
+
+                    console.log("Archivo gestionado con éxito:", result);
+                    alert("Archivo gestionado con éxito en GitHub.");
+                } catch (err) {
+                    console.error("Error al gestionar el archivo:", err);
+                    alert("Ocurrió un error. Ver consola para detalles.");
+                }
+            });
+        });
+
 
 
 
     </script>
+
 
 </body>
 
