@@ -39,7 +39,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 313079,
@@ -74,7 +75,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "Usado para aliviar la inflamación y el dolor moderado.",
-    "Imagen": "url_a_imagen_placeholder_2"
+    "Imagen": "url_a_imagen_placeholder_2",
+    "CantidadMinina": null
   },
   {
     "id": 169615,
@@ -88,7 +90,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 256366,
@@ -102,7 +105,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 265988,
@@ -114,7 +118,13 @@
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -130,7 +140,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 123951,
@@ -142,7 +153,13 @@
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -156,7 +173,13 @@
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -186,7 +209,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 291194,
@@ -213,7 +237,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -229,7 +259,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 251042,
@@ -243,7 +274,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 233198,
@@ -257,7 +289,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 107434,
@@ -285,7 +318,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 304065,
@@ -299,7 +333,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 115116,
@@ -340,7 +375,13 @@
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -356,7 +397,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 194471,
@@ -439,7 +481,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -455,7 +503,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 109085,
@@ -513,7 +562,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 259870,
@@ -525,7 +575,13 @@
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -541,7 +597,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": " 6 c/u # (14__,16__,18___,20__,22___,24___)",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 322490,
@@ -569,7 +626,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 218576,
@@ -595,7 +653,13 @@
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -624,7 +688,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -653,7 +723,13 @@
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -667,7 +743,13 @@
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -695,7 +777,13 @@
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -711,7 +799,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 231011,
@@ -725,7 +814,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 163460,
@@ -739,7 +829,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 136813,
@@ -753,7 +844,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 321566,
@@ -767,7 +859,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 236880,
@@ -795,7 +888,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 248994,
@@ -809,7 +903,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 195292,
@@ -835,7 +930,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -866,7 +967,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 126859,
@@ -880,7 +982,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 293066,
@@ -906,7 +1009,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -922,7 +1031,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 199688,
@@ -936,7 +1046,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 222969,
@@ -950,7 +1061,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 290347,
@@ -964,7 +1076,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 262937,
@@ -976,7 +1089,13 @@
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -990,7 +1109,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1021,7 +1146,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 232943,
@@ -1047,7 +1173,13 @@
     "CantidadSugerida": 5,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1077,7 +1209,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 132525,
@@ -1091,7 +1224,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 106796,
@@ -1103,9 +1237,16 @@
     "CantidadSugerida": 6,
     "CantidadMinima": 0,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 197704,
@@ -1119,7 +1260,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 256678,
@@ -1133,7 +1275,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 283172,
@@ -1159,7 +1302,13 @@
     "CantidadSugerida": 4,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1215,7 +1364,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1231,7 +1386,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 278695,
@@ -1245,7 +1401,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 238862,
@@ -1289,7 +1446,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 224932,
@@ -1303,7 +1461,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 193697,
@@ -1317,7 +1476,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 306585,
@@ -1345,7 +1505,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 319133,
@@ -1357,7 +1518,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1401,7 +1568,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 308919,
@@ -1429,7 +1597,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 242913,
@@ -1499,7 +1668,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 293450,
@@ -1527,7 +1697,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 129589,
@@ -1539,9 +1710,16 @@
     "CantidadSugerida": 6,
     "CantidadMinima": 0,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 153513,
@@ -1555,7 +1733,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 251006,
@@ -1569,7 +1748,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 327978,
@@ -1611,7 +1791,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 277512,
@@ -1625,7 +1806,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 266574,
@@ -1639,7 +1821,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 155359,
@@ -1651,7 +1834,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1665,7 +1854,13 @@
     "CantidadSugerida": 4,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1681,7 +1876,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 222871,
@@ -1693,7 +1889,13 @@
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1721,7 +1923,13 @@
     "CantidadSugerida": 10,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1751,7 +1959,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 113408,
@@ -1780,7 +1989,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 241137,
@@ -1794,7 +2004,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 260641,
@@ -1808,7 +2019,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 119675,
@@ -1822,7 +2034,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 234357,
@@ -1880,7 +2093,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 163002,
@@ -1894,7 +2108,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": " 2 c/u (1__, 1,5__, 2__, 2,5__, 3__, 4__, 5__, 6 __)",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 256805,
@@ -1908,7 +2123,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "16fr",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 107535,
@@ -1935,7 +2151,13 @@
     "CantidadSugerida": 10,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -2007,7 +2229,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 179313,
@@ -2021,7 +2244,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 144635,
@@ -2047,9 +2271,16 @@
     "CantidadSugerida": 6,
     "CantidadMinima": 0,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 166359,
@@ -2063,7 +2294,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 167492,
@@ -2092,7 +2324,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 290870,
@@ -2106,7 +2339,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 245063,
@@ -2120,7 +2354,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 112943,
@@ -2176,7 +2411,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 172924,
@@ -2188,7 +2424,13 @@
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -2204,7 +2446,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 181401,
@@ -2216,7 +2459,13 @@
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -2246,7 +2495,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 151216,
@@ -2274,7 +2524,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 275711,
@@ -2302,7 +2553,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 113520,
@@ -2345,7 +2597,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 319735,
@@ -2402,7 +2655,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 307330,
@@ -2416,7 +2670,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 119104,
@@ -2430,7 +2685,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 143018,
@@ -2444,7 +2700,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 189464,
@@ -2458,7 +2715,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 189313,
@@ -2470,7 +2728,13 @@
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -2486,7 +2750,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 171042,
@@ -2500,7 +2765,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 280783,
@@ -2514,7 +2780,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 179867,
@@ -2528,7 +2795,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 239810,
@@ -2542,7 +2810,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 160541,
@@ -2554,7 +2823,13 @@
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -2568,9 +2843,16 @@
     "CantidadSugerida": 6,
     "CantidadMinima": 0,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 173600,
@@ -2584,7 +2866,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 322567,
@@ -2624,9 +2907,16 @@
     "CantidadSugerida": 6,
     "CantidadMinima": 0,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 132143,
@@ -2682,7 +2972,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 145616,
@@ -2696,7 +2987,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 329571,
@@ -2710,7 +3002,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 273446,
@@ -2744,7 +3037,8 @@
       }
     },
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 281656,
@@ -2758,7 +3052,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 298586,
@@ -2786,7 +3081,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 159609,
@@ -2800,7 +3096,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 319515,
@@ -2842,7 +3139,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 155542,
@@ -2856,7 +3154,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 303831,
@@ -2884,7 +3183,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 268072,
@@ -2912,7 +3212,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 112691,
@@ -2938,7 +3239,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -2969,7 +3276,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "2c/u 2,5__ 3__ 3,5__ 4__ 4,5__ 5__ 5,5__ 6__ 6,5__ 7__ 7,5__ 8,0__ 9,0 ___",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 175342,
@@ -2983,7 +3291,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 112144,
@@ -2997,7 +3306,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 255176,
@@ -3011,7 +3321,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "Antibiótico usado para tratar infecciones bacterianas.",
-    "Imagen": "url_a_im"
+    "Imagen": "url_a_im",
+    "CantidadMinina": null
   },
   {
     "id": 214277,
@@ -3023,7 +3334,13 @@
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Tipo": "date",
+        "Valor": "30/12/2024"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -3068,7 +3385,8 @@
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "Juego de Adulto, color rojo",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   },
   {
     "id": 1733513518865,
@@ -3103,6 +3421,7 @@
       }
     },
     "DetalleLargo": "",
-    "Imagen": ""
+    "Imagen": "",
+    "CantidadMinina": null
   }
 ]
