@@ -278,13 +278,13 @@
       $("#equipmentTable").on("click", ".manage-optionals-btn", function () {
         const id = $(this).data("id");
         openOptionalsModal(id);
-        saveTempItems();
+
       });
 
       // Botón Agregar
       $("#AgregarBtn").click(() => {
         openFormModal(); // Sin datos para agregar nuevo
-        saveTempItems();
+   
       });
 
       // Evento para guardar cambios
@@ -302,7 +302,7 @@
         const id = $(this).data("id");
         const data = items.find((item) => item.id === id);
         openFormModal(data); // Pasa datos existentes
-       
+   
       });
 
       // Botón Eliminar
@@ -510,6 +510,7 @@
 
     function saveTempItems() {
       localStorage.setItem("temp_items", JSON.stringify(items));
+      notificar('saveTempItems');
     }
 
 
@@ -559,13 +560,13 @@
 
     $("#editForm").on("click", ".remove-optional-field", function () {
       $(this).closest(".optional-field").remove();
-      saveTempItems();
+
     });
 
     // Eliminar un campo opcional
     $(document).on('click', '.remove-optional-field', function () {
       $(this).closest('.optional-field').remove();
-      saveTempItems();
+
     });
 
     ////////////////////////// fin de opcionales ////////////////////////////////////////
@@ -694,7 +695,7 @@
           saveTempItems();
           // Configuración inicial
           const token =
-        "";
+           "";
           const owner = "fastreds";
           const repo = "AppRevAmbulancias";
           const fileName = "equipment_array.json"; // Archivo JSON

@@ -1,76 +1,852 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sugerencias Dinámicas</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mantenimiento de Equipos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/rowgroup/1.3.1/css/rowGroup.dataTables.min.css">
+
 </head>
-<body>
-  <div class="container mt-4">
-    <label for="dynamicInput" class="form-label">Buscar elementos:</label>
-    <input type="text" class="form-control" id="dynamicInput" placeholder="Escribe para buscar...">
-    <div class="list-group mt-2 d-none" id="suggestionBox"></div>
-  </div>
+<style>
+  body {
+    font-size: 0.8rem;
+  }
 
-  <script>
-    function enableSuggestions(inputId, suggestionsArray) {
-      const input = document.getElementById(inputId);
-      const suggestionBox = document.getElementById('suggestionBox');
+  .card {
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
 
-      // Mostrar sugerencias
-      const showSuggestions = (query = "") => {
-        suggestionBox.innerHTML = '';
-        const filtered = query
-          ? suggestionsArray.filter(item => item.toLowerCase().includes(query.toLowerCase()))
-          : suggestionsArray;
+  .card-title,
+  .card h6 {
+    font-size: 0.9rem;
+  }
 
-        if (filtered.length > 0) {
-          suggestionBox.classList.remove('d-none');
-          filtered.forEach(item => {
-            const suggestionItem = document.createElement('button');
-            suggestionItem.className = 'list-group-item list-group-item-action';
-            suggestionItem.textContent = item;
-            suggestionItem.addEventListener('click', () => {
-              input.value = item;
-              suggestionBox.classList.add('d-none');
-            });
-            suggestionBox.appendChild(suggestionItem);
-          });
-        } else {
-          suggestionBox.classList.add('d-none');
-        }
-      };
+  .card p,
+  .badge {
+    margin-bottom: 0.2rem;
+  }
 
-      // Eventos del input
-      input.addEventListener('input', () => {
-        showSuggestions(input.value);
-      });
+  .card-body {
+    padding: 0.5rem;
+  }
 
-      // Mostrar todas las opciones al presionar la flecha abajo
-      input.addEventListener('keydown', (event) => {
-        if (event.key === "ArrowDown") {
-          event.preventDefault();
-          showSuggestions();
-        }
-      });
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 
-      // Cerrar al hacer clic fuera
-      document.addEventListener('click', (event) => {
-        if (!suggestionBox.contains(event.target) && event.target !== input) {
-          suggestionBox.classList.add('d-none');
-        }
-      });
+  .optional-field {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background: #f9f9f9;
+  }
+
+  @media print {
+    body {
+      font-size: 0.7rem;
     }
 
-    // Datos simulados
-    const suggestions = ["Archivo", "Agregar", "GitHub", "Modelo inicial", "Actualizar", "Eliminar", "Exportar"];
+    .no-print {
+      display: none !important;
+    }
 
-    // Inicializar sugerencias
-    enableSuggestions('dynamicInput', suggestions);
+    .card {
+      border: none;
+    }
+  }
+</style>
+
+<body class="p-3">
+  <div class="container">
+    <h1 class="mb-4">Mantenimiento de Equipos</h1>
+    <!-- Botonera-->
+    <div class="btn-group mt-3" role="group" aria-label="Grupo de botones">
+      <button class="btn btn-primary" id="saveToFile">
+        Guardar en archivo
+      </button>
+      <button type="button" class="btn btn-success" id="AgregarBtn">
+        Agregar
+      </button>
+      <button id="btn_github" class="btn btn-warning">GitHub</button>
+      <button id="resetTemporal" class="btn btn-info">Cargar Modelo inicial</button>
+    </div>
+    <br>
+    <table id="equipmentTable" class="table table-striped" style="width: 100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Categoría</th>
+          <th>Subcategoría</th>
+          <th>Ubicación</th>
+          <th>Cantidad Sug.</th>
+          <th>Estado</th>
+          <th>Opcionales</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Editar Equipo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary" id="saveChanges">
+              Guardar Cambios
+            </button>
+            <form id="editForm">
+              <!-- Inputs dinámicos -->
+            </form>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal para Opcionales -->
+  <div class="modal fade" id="optionalsModal" tabindex="-1" aria-labelledby="optionalsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="optionalsModalLabel">Gestionar Opcionales</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="optionalFieldsContainer"></div>
+          <button class="btn btn-success mt-2" id="addOptionalField">Agregar Campo Opcional</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" id="saveOptionals">Guardar Opcionales</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--- EDITOR JSON-->
+  <div class="modal fade" id="jsonEditorModal" tabindex="-1" aria-labelledby="jsonEditorLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jsonEditorLabel">Editar JSON</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <textarea id="jsonEditorContent" class="form-control" rows="15"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancelar
+          </button>
+          <button type="button" class="btn btn-primary" id="saveJsonChanges">
+            Guardar Cambios
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--- FIN EDITOR JSON-->
+
+  <!-- MODAL UBICACIONES -->
+
+  <div id="editUbicacionModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Ubicación</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <select id="ubicacionSelect" class="form-control">
+            <option value="Botiquín de control de sangrados">Botiquín de control de sangrados</option>
+            <option value="Compartimento Central del Botiquín">Compartimento Central del Botiquín</option>
+            <option value="Otra Ubicación">Otra Ubicación</option>
+          </select>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="saveUbicacion">Guardar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIN MODAL UBICACIONES-->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.datatables.net/rowgroup/1.3.1/js/dataTables.rowGroup.min.js"></script>
+
+  <script src="main.js"></script>
+  <script>
+
+    let table;
+    let currentItemId = null; // ID del ítem en edición
+
+
+
+    ///////////////////////         local storage ////////////////////////
+    // Inicializa temp_items usando localStorage o con el contenido de items
+    function initializeTempItems() {
+      const savedData = localStorage.getItem("temp_items");
+
+      // Si hay datos guardados en localStorage, los cargamos, de lo contrario usamos items
+      if (savedData) {
+        items = JSON.parse(savedData);
+      } else {
+        items = [...items]; // Copia de items para trabajar sin modificar el original
+        localStorage.setItem("temp_items", JSON.stringify(items));
+      }
+    }
+
+    initializeTempItems();
+
+    // Eliminar la variable temporal 
+    $("#resetTemporal").click(() => {
+
+      if (confirm("confirma eliminar los cambios cargar el modelo original")) {
+        localStorage.removeItem("temp_items");
+        location.reload();
+      }
+
+    });
+
+
+
+
+
+
+    //////////////////////////tabla///////////////////////////
+
+    $(document).ready(function () {
+
+      $('#addOptionalField').on('click', addOptionalField);
+      $('#saveOptionals').on('click', saveOptionals);
+
+      // Inicializa DataTable con Row Grouping y parámetros adicionales
+      table = $("#equipmentTable").DataTable({
+        data: items,
+        columns: [
+          { data: "id" },
+          { data: "NombreVisible" },
+          { data: "Categoria" },
+          { data: "SubCategoria" },
+          {
+        data: "Ubicacion",
+        render: (data) => `<span class="edit-ubicacion">${data}</span>`,
+      },
+          { data: "CantidadSugerida" },
+          { data: "Estado" },
+          {
+            data: null,
+            render: (data) => `
+        <button class="btn btn-sm btn-info manage-optionals-btn btn-sm " data-id="${data.id}">Opc</button>
+        <button class="btn btn-secondary btn-sm edit-json" data-id="${data.id}">JSON</button>
+      `,
+          },
+          {
+            data: null,
+            render: (data) => `
+        <button class="btn btn-sm btn-primary edit-btn btn-sm " data-id="${data.id}">Editar</button>
+        <button class="btn btn-sm btn-danger delete-btn" data-id="${data.id}">Eliminar</button>
+      `,
+          },
+        ],
+        rowGroup: {
+          dataSrc: "Ubicacion", // Agrupa por el campo "Ubicacion"
+        },
+        paging: true, // Habilita paginación
+        searching: true, // Habilita búsqueda
+        ordering: true, // Habilita ordenación
+        pageLength: 25, // Número de filas por página
+        lengthMenu: [5, 10, 25, 50], // Opciones de filas por página
+        language: {
+          search: "Buscar:", // Personaliza el texto del campo de búsqueda
+          lengthMenu: "Mostrar _MENU_ filas por página",
+          paginate: {
+            first: "Primero",
+            last: "Último",
+            next: "Siguiente",
+            previous: "Anterior",
+          },
+          emptyTable: "No hay datos disponibles en la tabla",
+          responsive: true,
+          
+        },
+      });
+      
+
+      ///////////////////// UBICACION
+
+        // Evento para abrir el modal al hacer clic en "Ubicación"
+  $('#equipmentTable tbody').on('click', '.edit-ubicacion', function () {
+    const row = $(this).closest('tr');
+    selectedRowData = table.row(row).data();
+
+    // Cargar la ubicación actual en el modal
+    $('#ubicacionSelect').val(selectedRowData.Ubicacion);
+
+    // Mostrar el modal
+    $('#editUbicacionModal').modal('show');
+  });
+
+  // Guardar la nueva ubicación
+  $('#saveUbicacion').on('click', function () {
+    const nuevaUbicacion = $('#ubicacionSelect').val();
+
+    // Actualizar la data en el array y redibujar la tabla
+    if (selectedRowData) {
+      selectedRowData.Ubicacion = nuevaUbicacion;
+      table.row().data(selectedRowData).invalidate().draw(); // Actualiza la fila en la tabla
+    }
+
+    // Ocultar el modal
+    $('#editUbicacionModal').modal('hide');
+  });
+
+  ////////////////////////// OPCIONALES 
+
+      // Maneja el evento de clic para los botones "Opcionales"
+      $("#equipmentTable").on("click", ".manage-optionals-btn", function () {
+        const id = $(this).data("id");
+        openOptionalsModal(id);
+        saveTempItems();
+      });
+
+      // Botón Agregar
+      $("#AgregarBtn").click(() => {
+        openFormModal(); // Sin datos para agregar nuevo
+        saveTempItems();
+      });
+
+      // Evento para guardar cambios
+      $("#saveChanges").click(() => {
+        saveChanges();
+        saveTempItems();
+      });
+
+
+
+
+
+      // Botón Editar
+      $("#equipmentTable").on("click", ".edit-btn", function () {
+        const id = $(this).data("id");
+        const data = items.find((item) => item.id === id);
+        openFormModal(data); // Pasa datos existentes
+        saveTempItems();
+      });
+
+      // Botón Eliminar
+      $("#equipmentTable").on("click", ".delete-btn", function () {
+        const id = $(this).data("id");
+        deleteItem(id);
+        saveTempItems();
+      });
+
+      // Guardar en archivo
+      $("#saveToFile").click(() => {
+        const blob = new Blob([JSON.stringify(items, null, 2)], {
+          type: "text/plain",
+        });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "NuevaEstructura-equipment_data.json";
+        a.click();
+
+        saveTempItems();
+      });
+    });
+
+    // Abrir modal de opcionales para un ítem específico
+    function openOptionalsModal(id) {
+      currentItemId = id;
+      const currentItem = items.find((item) => item.id === id);
+      const opcionales = currentItem?.Opcionales || {};
+      $("#optionalFieldsContainer").html("");
+      Object.entries(opcionales).forEach(([key, { Nombre, Valor, Tipo }]) => {
+        $("#optionalFieldsContainer").append(`
+                    <div class="optional-field">
+                        <input type="text" class="form-control mb-2" placeholder="Nombre" value="${Nombre}">
+                        <select class="form-select mb-2">
+                            <option value="text" ${Tipo === "text" ? "selected" : ""
+          }>Texto</option>
+                            <option value="date" ${Tipo === "date" ? "selected" : ""
+          }>Fecha</option>
+                            <option value="number" ${Tipo === "number" ? "selected" : ""
+          }>Número</option>
+                        </select>
+                        <input type="${Tipo}" class="form-control mb-2" placeholder="Valor" value="${Valor}">
+                        <button class="btn btn-danger btn-sm remove-optional-field">Eliminar</button>
+                    </div>
+                `);
+      });
+      $("#optionalsModal").modal("show");
+    }
+
+    // Agregar campo opcional
+    function addOptionalField() {
+      $('#optionalFieldsContainer').append(`
+                <div class="optional-field">
+                    <input type="text" class="form-control mb-2" placeholder="Nombre">
+                    <select class="form-select mb-2">
+                        <option value="text">Texto</option>
+                        <option value="date">Fecha</option>
+                        <option value="number">Número</option>
+                    </select>
+                    <input type="text" class="form-control mb-2" placeholder="Valor">
+                    <button class="btn btn-danger btn-sm remove-optional-field">Eliminar</button>
+                </div>
+            `);
+    }
+
+    // Guardar opcionales
+    function saveOptionals() {
+
+      const opcionales = {};
+      $("#optionalFieldsContainer .optional-field").each(function (index) {
+        const Nombre = $(this).find("input").eq(0).val();
+        const Tipo = $(this).find("select").val();
+        const Valor = $(this).find("input").eq(1).val();
+        opcionales[`Opcion${index + 1}`] = { Nombre, Tipo, Valor };
+      });
+      const itemIndex = items.findIndex((item) => item.id === currentItemId);
+      if (itemIndex !== -1) {
+        items[itemIndex].Opcionales = opcionales;
+      }
+      $("#optionalsModal").modal("hide");
+      notificar("Opcionales guardados correctamente.");
+      saveTempItems();
+    }
+
+    // Abrir el modal de formulario
+    function openFormModal(data = null) {
+      const defaultData = {
+        NombreVisible: "",
+        Categoria: "",
+        SubCategoria: "",
+        Ubicacion: "",
+        CantidadSugerida: 0,
+        Estado: "",
+        DetalleLargo: "",
+        Imagen: "",
+      };
+
+      const formData = data || defaultData;
+
+      // Rellena el formulario
+      $("#editForm").html(`
+                ${generateFormField(
+        "NombreVisible",
+        "Nombre",
+        "text",
+        formData.NombreVisible
+      )}
+                ${generateCategoryField(formData.Categoria, "Categoria")}
+                ${generateCategoryField(formData.SubCategoria, "SubCategoria")}
+                ${generateCategoryField(formData.Ubicacion, "Ubicacion")}
+                ${generateFormField(
+        "CantidadSugerida",
+        "Cantidad Sugerida",
+        "number",
+        formData.CantidadSugerida
+      )}
+                ${generateCategoryField(formData.Estado, "Estado")}
+                ${generateFormField(
+        "DetalleLargo",
+        "Detalle Largo",
+        "textarea",
+        formData.DetalleLargo
+      )}
+                ${generateFormField(
+        "Imagen",
+        "Imagen URL",
+        "text",
+        formData.Imagen
+      )}
+                ${generateOptionalFields(formData.Opcionales || {})}
+            `);
+
+      $("#editModal")
+        .data("id", data?.id || null)
+        .modal("show");
+    }
+
+    // Guardar cambios (agregar/editar)
+    function saveChanges() {
+      const id = $("#editModal").data("id");
+      const newOpcionales = {};
+
+      //define los opcionales
+      $("#OpcionalesContainer .optional-field").each(function (index) {
+        const key = `Opcion${index + 1}`;
+        const Nombre = $(this).find('input[type="text"]:first').val();
+        const Tipo = $(this).find("select").val();
+        const Valor =
+          Tipo === "checkbox"
+            ? $(this).find('input[type="checkbox"]').is(":checked")
+            : $(this).find('input[type="text"]:last').val();
+
+        newOpcionales[key] = { Nombre, Valor, Tipo };
+      });
+
+      const newItem = {
+        id: id || Date.now(), // Nuevo ID si es un elemento nuevo
+        NombreVisible: $("#NombreVisible").val(),
+
+        Categoria:
+          $("#NuevaCategoria").is(":visible") && $("#NuevaCategoria").val()
+            ? $("#NuevaCategoria").val()
+            : $("#Categoria").val(),
+
+        SubCategoria:
+          $("#NuevaSubCategoria").is(":visible") &&
+            $("#NuevaSubCategoria").val()
+            ? $("#NuevaSubCategoria").val()
+            : $("#SubCategoria").val(),
+
+        Ubicacion:
+          $("#NuevaUbicacion").is(":visible") && $("#NuevaUbicacion").val()
+            ? $("#NuevaUbicacion").val()
+            : $("#Ubicacion").val(),
+
+        tipoCampo: "NoDefinido",
+
+        CantidadSugerida: parseInt($("#CantidadSugerida").val()) || 0,
+
+        CantidadMinima: 0,
+
+        Estado:
+          $("#NuevaEstado").is(":visible") && $("#NuevaEstado").val()
+            ? $("#NuevaEstado").val()
+            : $("#Estado").val(),
+
+        Opcionales: newOpcionales,
+
+        DetalleLargo: $("#DetalleLargo").val(),
+        Imagen: $("#Imagen").val(),
+      };
+
+      if (id) {
+        // Editar
+        const index = items.findIndex((item) => item.id === id);
+        items[index] = newItem;
+      } else {
+        // Agregar nuevo
+        items.push(newItem);
+      }
+
+      $("#editModal").modal("hide");
+      table.clear().rows.add(items).draw();
+    }
+
+    function saveTempItems() {
+      localStorage.setItem("temp_items", JSON.stringify(items));
+      notificar('saveTempItems');
+    }
+
+
+    /// //////////////////////////////////////////////////////////// opcionales del formulario principal 
+    function generateOptionalFields(opcionales = {}) {
+      return `
+                <div id="OpcionalesContainer">
+                    ${Object.entries(opcionales)
+          .map(
+            ([key, { Nombre, Valor, Tipo }]) => `
+                        <div class="optional-field mb-3" data-key="${key}">
+                            <input type="text" class="form-control mb-2" value="${Nombre}" placeholder="Nombre del campo">
+                            <select class="form-select mb-2">
+                                <option value="text" ${Tipo === "text" ? "selected" : ""
+              }>Texto</option>
+                                <option value="fecha" ${Tipo === "fecha" ? "selected" : ""
+              }>Fecha</option>
+                                <option value="checkbox" ${Tipo === "Checkbox" ? "selected" : ""
+              }>Checkbox</option>
+                            </select>
+                            <input type="${Tipo === "Checkbox" ? "checkbox" : "text"
+              }" class="form-control mb-2" value="${Valor}" placeholder="Valor">
+                            <button type="button" class="btn btn-danger btn-sm remove-optional-field">Eliminar</button>
+                        </div>
+                    `
+          )
+          .join("")}
+                </div>
+                <button type="button" class="btn btn-primary btn-sm mt-3" id="addOptionalField">Agregar Campo Opcional</button>
+            `;
+    }
+    $("#editForm").on("click", "#addOptionalField", function () {
+      const fieldCount = $("#OpcionalesContainer .optional-field").length + 1;
+      $("#OpcionalesContainer").append(`
+        <div class="optional-field mb-3" data-key="Opcion${fieldCount}">
+            <input type="text" class="form-control mb-2" placeholder="Nombre del campo">
+            <select class="form-select mb-2">
+                <option value="text">Texto</option>
+                <option value="fecha">Fecha</option>
+                <option value="checkbox">Checkbox</option>
+            </select>
+            <input type="text" class="form-control mb-2" placeholder="Valor">
+            <button type="button" class="btn btn-danger btn-sm remove-optional-field">Eliminar</button>
+        </div>
+    `);
+    });
+
+    $("#editForm").on("click", ".remove-optional-field", function () {
+      $(this).closest(".optional-field").remove();
+      saveTempItems();
+    });
+
+    // Eliminar un campo opcional
+    $(document).on('click', '.remove-optional-field', function () {
+      $(this).closest('.optional-field').remove();
+      saveTempItems();
+    });
+
+    ////////////////////////// fin de opcionales ////////////////////////////////////////
+    // Eliminar un elemento
+    function deleteItem(id) {
+      const index = items.findIndex((item) => item.id === id);
+      if (index !== -1) {
+        items.splice(index, 1);
+        table
+          .row($(`[data-id="${id}"]`).parents("tr"))
+          .remove()
+          .draw();
+      }
+    }
+
+    // Generar campo de formulario
+    function generateFormField(id, label, type, value) {
+      if (type === "textarea") {
+        return `
+                    <div class="mb-3">
+                        <label for="${id}" class="form-label">${label}</label>
+                        <textarea class="form-control" id="${id}">${value}</textarea>
+                    </div>
+                `;
+      }
+      return `
+                <div class="mb-3">
+                    <label for="${id}" class="form-label">${label}</label>
+                    <input type="${type}" class="form-control" id="${id}" value="${value}">
+                </div>
+            `;
+    }
+
+    // Generar campo de categoría
+    function generateCategoryField(selectedValue, baseKey) {
+      const categories = [...new Set(items.map((item) => item[baseKey]))];
+      return `
+        <div class="mb-3">
+            <label for="${baseKey}" class="form-label">${baseKey}</label>
+            <select class="form-select dynamic-select" id="${baseKey}" data-base-key="${baseKey}">
+                ${categories
+          .map(
+            (c) =>
+              `<option value="${c}" ${c === selectedValue ? "selected" : ""
+              }>${c}</option>`
+          )
+          .join("")}
+                <option value="Otra">Nueva ${baseKey.toLowerCase()}</option>
+            </select>
+            <input type="text" class="form-control mt-2 d-none new-input" id="Nueva${baseKey}" placeholder="Escriba nueva ${baseKey.toLowerCase()}">
+        </div>
+    `;
+    }
+
+    // Escuchar cambios para mostrar/ocultar el campo de texto
+    $("#editForm").on("change", ".dynamic-select", function () {
+      const baseKey = $(this).data("base-key"); // Extrae el identificador único
+      const newInput = $(`#Nueva${baseKey}`);
+      if ($(this).val() === "Otra") {
+        newInput.removeClass("d-none").focus();
+      } else {
+        newInput.addClass("d-none").val(""); // Limpia el valor si vuelve a ser oculto
+      }
+    });
+
+
+
+    ///////////////////////////// EDITOR JSON ///////////////////////////////////
+
+    $("#equipmentTable").on("click", ".edit-json", function () {
+      const id = $(this).data("id");
+      const item = items.find((item) => item.id === id);
+
+      $("#jsonEditorModal").data("id", id).modal("show");
+      $("#jsonEditorContent").val(JSON.stringify(item, null, 4));
+
+      saveTempItems();
+    });
+
+    $("#saveJsonChanges").on("click", function () {
+      const id = $("#jsonEditorModal").data("id");
+      const jsonContent = $("#jsonEditorContent").val();
+
+      try {
+        // Validar el JSON
+        const updatedItem = JSON.parse(jsonContent);
+
+        // Buscar y actualizar el elemento
+        const index = items.findIndex((item) => item.id === id);
+        if (index > -1) {
+          items[index] = updatedItem;
+        }
+
+        // Cerrar el modal y actualizar la tabla
+        $("#jsonEditorModal").modal("hide");
+        table.clear().rows.add(items).draw();
+
+        notificar("JSON actualizado correctamente.");
+      } catch (error) {
+        notificar("El JSON no es válido: " + error.message);
+      }
+
+      saveTempItems();
+    });
+  </script>
+
+
+
+
+  <script type="module">
+    ////////////////////// gestion btn giyhub  /////////////////
+    import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document
+        .getElementById("btn_github")
+        .addEventListener("click", async () => {
+
+          const confirmAction = confirm(
+            "¿Deseas continuar con la operación en GitHub?"
+          );
+          if (!confirmAction) {
+            alert("Operación cancelada por el usuario.");
+            return;
+          }
+          saveTempItems();
+          // Configuración inicial
+          const token =
+           "";
+          const owner = "fastreds";
+          const repo = "AppRevAmbulancias";
+          const fileName = "equipment_array.json"; // Archivo JSON
+
+          const octokit = new Octokit({ auth: token });
+
+          console.log(items);
+
+          try {
+            // Consulta el archivo en el repositorio
+            let fileSha = null;
+
+            try {
+              const { data } = await octokit.repos.getContent({
+                owner,
+                repo,
+                path: fileName,
+              });
+              fileSha = data.sha; // Obtener el SHA para actualizar el archivo
+              console.log("Archivo encontrado:", data);
+            } catch (error) {
+              if (error.status === 404) {
+                console.log("Archivo no encontrado. Se creará uno nuevo.");
+              } else {
+                throw error;
+              }
+            }
+
+            // Obtener el contenido de `items` desde localStorage
+            // const items = localStorage.getItem("items");
+            if (!items) {
+              alert(
+                "No hay datos disponibles en localStorage con clave 'items'."
+              );
+              return;
+            }
+
+            function recorrerRecursivamente(items) {
+              // Función para recorrer el array y crear el objeto JSON
+              function crearJSON(item) {
+                if (Array.isArray(item)) {
+                  return item.map(crearJSON); // Si el item es un array, recursivamente aplicar la función a cada elemento
+                } else if (typeof item === "object" && item !== null) {
+                  const result = {};
+                  for (const key in item) {
+                    if (item.hasOwnProperty(key)) {
+                      result[key] = crearJSON(item[key]); // Recursión en las propiedades de objetos
+                    }
+                  }
+                  return result;
+                }
+                return item; // Si es un valor primitivo, simplemente devolverlo
+              }
+
+              // Convertir el array original en una estructura JSON
+              const jsonStructure = JSON.stringify(crearJSON(items));
+
+              // Asegurarse de que la cadena JSON esté correctamente codificada en UTF-8
+              const utf8Json = unescape(encodeURIComponent(jsonStructure));
+
+              // Codificar la estructura JSON en Base64
+              const base64Encoded = btoa(utf8Json);
+
+              return base64Encoded;
+            }
+
+            const resultadoBase64 = recorrerRecursivamente(items);
+            console.log(resultadoBase64);
+
+            // Crear o actualizar el archivo
+            const result = await octokit.repos.createOrUpdateFileContents({
+              owner,
+              repo,
+              path: fileName,
+              message: fileSha
+                ? "Actualizar archivo JSON"
+                : "Crear archivo JSON",
+              content: resultadoBase64, // Contenido codificado en Base64
+              sha: fileSha, // Solo para actualizar
+            });
+
+            console.log("Archivo gestionado con éxito:", result);
+            alert("Archivo gestionado con éxito en GitHub.");
+          } catch (err) {
+            console.error("Error al gestionar el archivo:", err);
+            alert("Ocurrió un error. Ver consola para detalles.");
+          }
+        });
+    });
   </script>
 </body>
+
 </html>
