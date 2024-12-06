@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sugerencias Dinámicas</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <label for="dynamicInput" class="form-label">Buscar elementos:</label>
+    <input type="text" class="form-control" id="dynamicInput" placeholder="Escribe para buscar...">
+    <div class="list-group mt-2 d-none" id="suggestionBox"></div>
+  </div>
+
+  <script>
+    function enableSuggestions(inputId, suggestionsArray) {
+      const input = document.getElementById(inputId);
+      const suggestionBox = document.getElementById('suggestionBox');
+
+      // Mostrar sugerencias
+      const showSuggestions = (query = "") => {
+        suggestionBox.innerHTML = '';
+        const filtered = query
+          ? suggestionsArray.filter(item => item.toLowerCase().includes(query.toLowerCase()))
+          : suggestionsArray;
+
+        if (filtered.length > 0) {
+          suggestionBox.classList.remove('d-none');
+          filtered.forEach(item => {
+            const suggestionItem = document.createElement('button');
+            suggestionItem.className = 'list-group-item list-group-item-action';
+            suggestionItem.textContent = item;
+            suggestionItem.addEventListener('click', () => {
+              input.value = item;
+              suggestionBox.classList.add('d-none');
+            });
+            suggestionBox.appendChild(suggestionItem);
+          });
+        } else {
+          suggestionBox.classList.add('d-none');
+        }
+      };
+
+      // Eventos del input
+      input.addEventListener('input', () => {
+        showSuggestions(input.value);
+      });
+
+      // Mostrar todas las opciones al presionar la flecha abajo
+      input.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+          event.preventDefault();
+          showSuggestions();
+        }
+      });
+
+      // Cerrar al hacer clic fuera
+      document.addEventListener('click', (event) => {
+        if (!suggestionBox.contains(event.target) && event.target !== input) {
+          suggestionBox.classList.add('d-none');
+        }
+      });
+    }
+
+    // Datos simulados
+    const suggestions = ["Archivo", "Agregar", "GitHub", "Modelo inicial", "Actualizar", "Eliminar", "Exportar"];
+
+    // Inicializar sugerencias
+    enableSuggestions('dynamicInput', suggestions);
+  </script>
+</body>
+</html>
