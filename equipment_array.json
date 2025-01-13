@@ -1,11 +1,11 @@
 [
   {
     "id": 254729,
-    "NombreVisible": "Venda israel√≠",
+    "NombreVisible": "Venda israelÌ",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Botiqu√≠n de control de sangrados",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "BotiquÌn de control de sangrados",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -18,8 +18,8 @@
     "NombreVisible": "Tegaderm",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -29,7 +29,7 @@
   },
   {
     "id": 294428,
-    "NombreVisible": "Ventilador Manual Pedi√°trico",
+    "NombreVisible": "Ventilador Manual Pedi·trico",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Equipo",
     "Ubicacion": "10 Compartimento Mueble",
@@ -44,9 +44,9 @@
   },
   {
     "id": 313079,
-    "NombreVisible": "Carb√≥n activado",
+    "NombreVisible": "CarbÛn activado",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Ant√≠doto",
+    "SubCategoria": "AntÌdoto",
     "Ubicacion": "Caja de medicamentos",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 1,
@@ -55,7 +55,7 @@
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Valor": "25/1125",
+        "Valor": "01/01/24",
         "Tipo": "fecha"
       }
     },
@@ -65,22 +65,22 @@
   },
   {
     "id": 184716,
-    "NombreVisible": "Juego de c√°nulas orofar√≠ngeas 6 tama√±os",
+    "NombreVisible": "Juego de c·nulas orofarÌngeas 6 tamaÒos",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 1,
     "CantidadMinima": 0,
     "Estado": "Disponible",
     "Opcionales": {},
-    "DetalleLargo": "Usado para aliviar la inflamaci√≥n y el dolor moderado.",
+    "DetalleLargo": "Usado para aliviar la inflamaciÛn y el dolor moderado.",
     "Imagen": "url_a_imagen_placeholder_2",
     "CantidadMinina": null
   },
   {
     "id": 169615,
-    "NombreVisible": "Term√≥metro digital",
+    "NombreVisible": "TermÛmetro digital",
     "Categoria": "Equipo de Signos Vitales",
     "SubCategoria": "Equipo",
     "Ubicacion": "Bolso Signos Vitales",
@@ -95,10 +95,10 @@
   },
   {
     "id": 256366,
-    "NombreVisible": "Mango laringoscopio con bater√≠as",
-    "Categoria": "Equipo de intubaci√≥n",
+    "NombreVisible": "Mango laringoscopio con baterÌas",
+    "Categoria": "Equipo de intubaciÛn",
     "SubCategoria": "Equipo",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 1,
     "CantidadMinima": 0,
@@ -114,15 +114,15 @@
     "Categoria": "Medicamentos de emergencia",
     "SubCategoria": "Antihipertensivo",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
-    "CantidadSugerida": 1,
-    "CantidadMinina": 1,
+    "tipoCampo": "NoDefinido",
+    "CantidadSugerida": 0,
+    "CantidadMinima": 0,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
-        "Valor": "30/12/2024"
+        "Valor": "30/12/2024",
+        "Tipo": "text"
       }
     },
     "DetalleLargo": "",
@@ -130,7 +130,7 @@
   },
   {
     "id": 118532,
-    "NombreVisible": "Guantes quir√∫rgicos individuales talla 6,7,8",
+    "NombreVisible": "Guantes quir˙rgicos individuales talla 6,7,8",
     "Categoria": "EPP y Ropa descartable Ambulancia",
     "SubCategoria": "Descartable",
     "Ubicacion": "9 Compartimento Mueble",
@@ -146,17 +146,17 @@
   {
     "id": 123951,
     "NombreVisible": "Rocuronio  50mg/5ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
+    "Categoria": "Medicamentos del botiquÌn",
     "SubCategoria": "Paralizante",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -167,16 +167,16 @@
     "id": 292405,
     "NombreVisible": "Bicarbonato de sodio  8,4% p/v",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Anti√°cidos",
+    "SubCategoria": "Anti·cidos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -185,21 +185,52 @@
   },
   {
     "id": 256443,
-    "NombreVisible": "Cat√©ter IV #16",
+    "NombreVisible": "CatÈter Intravenoso",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NoDefinido",
     "CantidadSugerida": 3,
-    "CantidadMinina": 1,
+    "CantidadMinima": 0,
     "Estado": "Disponible",
-    "Opcionales": {},
-    "DetalleLargo": "",
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "CatÈter #24",
+        "Valor": "6",
+        "Tipo": "text"
+      },
+      "Opcion2": {
+        "Nombre": "CatÈter #22",
+        "Valor": "6",
+        "Tipo": "text"
+      },
+      "Opcion3": {
+        "Nombre": "CatÈter #20",
+        "Valor": "6",
+        "Tipo": "text"
+      },
+      "Opcion4": {
+        "Nombre": "CatÈter #18",
+        "Valor": "6",
+        "Tipo": "text"
+      },
+      "Opcion5": {
+        "Nombre": "CatÈter #16",
+        "Valor": "6",
+        "Tipo": "text"
+      },
+      "Opcion6": {
+        "Nombre": "CatÈter #14",
+        "Valor": "6",
+        "Tipo": "text"
+      }
+    },
+    "DetalleLargo": "6 de cada uno",
     "Imagen": ""
   },
   {
     "id": 216664,
-    "NombreVisible": "Sensor de capn√≥grafo",
+    "NombreVisible": "Sensor de capnÛgrafo",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
     "Ubicacion": "Bolso Monitor Cardiaco",
@@ -214,7 +245,7 @@
   },
   {
     "id": 291194,
-    "NombreVisible": "Aspirador port√°til",
+    "NombreVisible": "Aspirador port·til",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Equipo",
     "Ubicacion": "1 Compartimento mueble",
@@ -231,16 +262,16 @@
     "id": 123523,
     "NombreVisible": "Adenosina  6mg/2ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Antiarr√≠tmicos",
+    "SubCategoria": "AntiarrÌtmicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -264,7 +295,7 @@
   },
   {
     "id": 251042,
-    "NombreVisible": "Torniquete de uni√≥n SAM",
+    "NombreVisible": "Torniquete de uniÛn SAM",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Equipo",
     "Ubicacion": "14 Compartimento Mueble",
@@ -279,8 +310,8 @@
   },
   {
     "id": 233198,
-    "NombreVisible": "F√©rula Espalda Ped. c/ Sujetador",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "NombreVisible": "FÈrula Espalda Ped. c/ Sujetador",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "15 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -291,20 +322,6 @@
     "DetalleLargo": "",
     "Imagen": "",
     "CantidadMinina": null
-  },
-  {
-    "id": 107434,
-    "NombreVisible": "Cat√©ter IV #20",
-    "Categoria": "Terapia IV / IM",
-    "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
-    "CantidadSugerida": 3,
-    "CantidadMinina": 1,
-    "Estado": "Disponible",
-    "Opcionales": {},
-    "DetalleLargo": "",
-    "Imagen": ""
   },
   {
     "id": 311198,
@@ -323,8 +340,8 @@
   },
   {
     "id": 304065,
-    "NombreVisible": "F√©rulas al vac√≠o 3 uds",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "NombreVisible": "FÈrulas al vacÌo 3 uds",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "15 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -341,8 +358,8 @@
     "NombreVisible": "Torniquete SAM",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Botiqu√≠n de control de sangrados",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "BotiquÌn de control de sangrados",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -368,17 +385,17 @@
   {
     "id": 183394,
     "NombreVisible": "Diclofenaco  75mg/3ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Analg√©sicos",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "AnalgÈsicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -390,7 +407,7 @@
     "NombreVisible": "Tijera de trabajo pesado",
     "Categoria": "Equipo de Signos Vitales",
     "SubCategoria": "Equipo",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 1,
     "CantidadMinima": 0,
@@ -402,11 +419,11 @@
   },
   {
     "id": 194471,
-    "NombreVisible": "Ap√≥sitos 4x4 Est√©riles",
+    "NombreVisible": "ApÛsitos 4x4 EstÈriles",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Botiqu√≠n de control de sangrados",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "BotiquÌn de control de sangrados",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -419,8 +436,8 @@
     "NombreVisible": "Jeringa 3 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -433,8 +450,8 @@
     "NombreVisible": "Bolsa Roja",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -445,20 +462,26 @@
   {
     "id": 291180,
     "NombreVisible": "Dexametasona  4mg/ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
+    "Categoria": "Medicamentos del botiquÌn",
     "SubCategoria": "Esteroide",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
   {
     "id": 130554,
-    "NombreVisible": "Suero fisiol√≥gico 100 ml",
+    "NombreVisible": "Suero fisiolÛgico 100 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
     "Ubicacion": "3 Compartimento Mueble",
@@ -474,17 +497,17 @@
   {
     "id": 190978,
     "NombreVisible": "Metoclopramida  10mg/2ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Procin√©ticos",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "ProcinÈticos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -493,7 +516,7 @@
   },
   {
     "id": 218896,
-    "NombreVisible": "Sistema fijo de Ox√≠geno Cilindro",
+    "NombreVisible": "Sistema fijo de OxÌgeno Cilindro",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Equipo",
     "Ubicacion": "Modulo De Ambulancia",
@@ -523,11 +546,11 @@
   },
   {
     "id": 111445,
-    "NombreVisible": "Aguja intra√≥sea 25 mm",
+    "NombreVisible": "Aguja intraÛsea 25 mm",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -569,16 +592,16 @@
     "id": 259870,
     "NombreVisible": "Amiodarona  150mg/3ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Antiarr√≠tmicos",
+    "SubCategoria": "AntiarrÌtmicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -587,7 +610,7 @@
   },
   {
     "id": 254643,
-    "NombreVisible": "Cat√©ter Intravenoso",
+    "NombreVisible": "CatÈter Intravenoso",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
     "Ubicacion": "5 Compartimento Mueble",
@@ -595,22 +618,58 @@
     "CantidadSugerida": 6,
     "CantidadMinima": 0,
     "Estado": "Disponible",
-    "Opcionales": {},
-    "DetalleLargo": " 6 c/u # (14__,16__,18___,20__,22___,24___)",
-    "Imagen": "",
-    "CantidadMinina": null
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "CatÈter #24",
+        "Valor": "6",
+        "Tipo": "text"
+      },
+      "Opcion2": {
+        "Nombre": "CatÈter #22",
+        "Valor": "6",
+        "Tipo": "text"
+      },
+      "Opcion3": {
+        "Nombre": "CatÈter #20",
+        "Valor": "6",
+        "Tipo": "text"
+      },
+      "Opcion4": {
+        "Nombre": "CatÈter #18",
+        "Valor": "6",
+        "Tipo": "text"
+      },
+      "Opcion5": {
+        "Nombre": "CatÈter #16",
+        "Valor": "6",
+        "Tipo": "text"
+      },
+      "Opcion6": {
+        "Nombre": "CatÈter #14",
+        "Valor": "6",
+        "Tipo": "text"
+      }
+    },
+    "DetalleLargo": "6 de cada uno",
+    "Imagen": ""
   },
   {
     "id": 322490,
     "NombreVisible": "Flumazenil  0.5mg/5ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Ant√≠doto",
+    "SubCategoria": "AntÌdoto",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -632,14 +691,20 @@
   {
     "id": 218576,
     "NombreVisible": "Morfina  15mg/ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Analg√©sicos",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "AnalgÈsicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -649,14 +714,14 @@
     "Categoria": "Medicamentos de emergencia",
     "SubCategoria": "Benzodiacepinas",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -666,7 +731,7 @@
   {
     "id": 158789,
     "NombreVisible": "Jeringa 10 ml",
-    "Categoria": "Equipo de intubaci√≥n",
+    "Categoria": "Equipo de intubaciÛn",
     "SubCategoria": "Descartable",
     "Ubicacion": "5 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -682,16 +747,16 @@
     "id": 305312,
     "NombreVisible": "Simeticona 15g/100ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Anti√°cidos",
+    "SubCategoria": "Anti·cidos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -700,7 +765,7 @@
   },
   {
     "id": 262907,
-    "NombreVisible": "Suero fisiol√≥gico 250 ml",
+    "NombreVisible": "Suero fisiolÛgico 250 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
     "Ubicacion": "3 Compartimento Mueble",
@@ -715,19 +780,19 @@
   },
   {
     "id": 159458,
-    "NombreVisible": "Fluoresce√≠na  1mg",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Tinci√≥n",
-    "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "NombreVisible": "FluoresceÌna  1mg",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "TinciÛn",
+    "Ubicacion": "Caja Medicamentos #2",
+    "tipoCampo": "NoDefinido",
     "CantidadSugerida": 6,
-    "CantidadMinina": 1,
+    "CantidadMinima": 0,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
-        "Valor": "30/12/2024"
+        "Valor": "30/12/2024",
+        "Tipo": "text"
       }
     },
     "DetalleLargo": "",
@@ -739,14 +804,14 @@
     "Categoria": "Medicamentos de emergencia",
     "SubCategoria": "Antiagregante plaquetario",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -758,8 +823,8 @@
     "NombreVisible": "Espadrapo",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -773,14 +838,14 @@
     "Categoria": "Medicamentos de emergencia",
     "SubCategoria": "Broncodilatador",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -789,7 +854,7 @@
   },
   {
     "id": 241045,
-    "NombreVisible": "Traje protecci√≥n (Kimono) S-M-L",
+    "NombreVisible": "Traje protecciÛn (Kimono) S-M-L",
     "Categoria": "EPP y Ropa descartable Ambulancia",
     "SubCategoria": "Descartable",
     "Ubicacion": "15 Compartimento Mueble",
@@ -804,10 +869,10 @@
   },
   {
     "id": 231011,
-    "NombreVisible": "Gu√≠a met√°lica para intubaci√≥n",
-    "Categoria": "Equipo de intubaci√≥n",
+    "NombreVisible": "GuÌa met·lica para intubaciÛn",
+    "Categoria": "Equipo de intubaciÛn",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 1,
     "CantidadMinima": 0,
@@ -819,8 +884,8 @@
   },
   {
     "id": 163460,
-    "NombreVisible": "F√©rula de Tracci√≥n",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "NombreVisible": "FÈrula de TracciÛn",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "15 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -834,8 +899,8 @@
   },
   {
     "id": 136813,
-    "NombreVisible": "Collar cervical pedi√°trico",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "NombreVisible": "Collar cervical pedi·trico",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "14 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -864,11 +929,11 @@
   },
   {
     "id": 236880,
-    "NombreVisible": "Taladro intra√≥seo",
+    "NombreVisible": "Taladro intraÛseo",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Equipo",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -893,8 +958,8 @@
   },
   {
     "id": 248994,
-    "NombreVisible": "F√©rula Espalda Adulto c/ Sujetador",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "NombreVisible": "FÈrula Espalda Adulto c/ Sujetador",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "16 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -908,11 +973,11 @@
   },
   {
     "id": 195292,
-    "NombreVisible": "Conexi√≥n Para Suero",
+    "NombreVisible": "ConexiÛn Para Suero",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -923,17 +988,17 @@
   {
     "id": 159351,
     "NombreVisible": "Buscapina  10mg/ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Antiespasm√≥dicos",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "AntiespasmÛdicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -942,7 +1007,7 @@
   },
   {
     "id": 103478,
-    "NombreVisible": "Mascarilla reservorio Pedi√°trica",
+    "NombreVisible": "Mascarilla reservorio Pedi·trica",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Descartable",
     "Ubicacion": "4 Compartimento Mueble",
@@ -973,7 +1038,7 @@
   {
     "id": 126859,
     "NombreVisible": "Collar cervical Adulto",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "14 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -987,11 +1052,11 @@
   },
   {
     "id": 293066,
-    "NombreVisible": "Aguja intra√≥sea 45 mm",
+    "NombreVisible": "Aguja intraÛsea 45 mm",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1002,17 +1067,17 @@
   {
     "id": 160619,
     "NombreVisible": "Adrenalina  1mg/ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Agonista adren√©rgico",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "Agonista adrenÈrgico",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1051,8 +1116,8 @@
   },
   {
     "id": 222969,
-    "NombreVisible": "C√°nulas orofar√≠ngeas 6 tama√±os",
-    "Categoria": "Equipo de intubaci√≥n",
+    "NombreVisible": "C·nulas orofarÌngeas 6 tamaÒos",
+    "Categoria": "Equipo de intubaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "Bolso Signos Vitales",
     "tipoCampo": "NoDefinido",
@@ -1066,7 +1131,7 @@
   },
   {
     "id": 290347,
-    "NombreVisible": "Cascos de Protecci√≥n con l√°mpara",
+    "NombreVisible": "Cascos de ProtecciÛn con l·mpara",
     "Categoria": "EPP y Ropa descartable Ambulancia",
     "SubCategoria": "Equipo",
     "Ubicacion": "7 compartimento Mueble",
@@ -1081,19 +1146,19 @@
   },
   {
     "id": 262937,
-    "NombreVisible": "Lidoca√≠na sin preservantes 2%",
+    "NombreVisible": "LidocaÌna sin preservantes 2%",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Antiarr√≠tmicos",
-    "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "SubCategoria": "AntiarrÌtmicos",
+    "Ubicacion": "Caja Medicamentos #2",
+    "tipoCampo": "NoDefinido",
     "CantidadSugerida": 1,
-    "CantidadMinina": 1,
+    "CantidadMinima": 0,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
-        "Valor": "30/12/2024"
+        "Valor": "30/12/2024",
+        "Tipo": "text"
       }
     },
     "DetalleLargo": "",
@@ -1103,16 +1168,16 @@
     "id": 145800,
     "NombreVisible": "Propranolol  1mg/ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Antiarr√≠tmicos",
+    "SubCategoria": "AntiarrÌtmicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1121,7 +1186,7 @@
   },
   {
     "id": 113487,
-    "NombreVisible": "Venda Cob√°n",
+    "NombreVisible": "Venda Cob·n",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
     "Ubicacion": "7 compartimento Mueble",
@@ -1137,9 +1202,9 @@
   {
     "id": 131717,
     "NombreVisible": "Hojas Macintosh",
-    "Categoria": "Equipo de intubaci√≥n",
+    "Categoria": "Equipo de intubaciÛn",
     "SubCategoria": "Equipo",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 4,
     "CantidadMinima": 0,
@@ -1154,8 +1219,8 @@
     "NombreVisible": "SF 250 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento B del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento B del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1167,16 +1232,16 @@
     "id": 220751,
     "NombreVisible": "Furosemida  20mg/2ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Diur√©tico",
+    "SubCategoria": "DiurÈtico",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 5,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1188,8 +1253,8 @@
     "NombreVisible": "Guantes Nitrilo Pares",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 12,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1231,7 +1296,7 @@
     "id": 106796,
     "NombreVisible": "No Gas",
     "Categoria": "Medicamentos orales",
-    "SubCategoria": "Anti√°cidos",
+    "SubCategoria": "Anti·cidos",
     "Ubicacion": "Caja Medicamentos #2",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 6,
@@ -1240,7 +1305,7 @@
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1250,7 +1315,7 @@
   },
   {
     "id": 197704,
-    "NombreVisible": "Llave de tres v√≠as",
+    "NombreVisible": "Llave de tres vÌas",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
     "Ubicacion": "5 Compartimento Mueble",
@@ -1281,14 +1346,20 @@
   {
     "id": 283172,
     "NombreVisible": "Ketamina  10mg/ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Analg√©sicos",
-    "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "AnalgÈsicos",
+    "Ubicacion": "Caja Medicamentos #2",
+    "tipoCampo": "NoDefinido",
     "CantidadSugerida": 1,
-    "CantidadMinina": 1,
+    "CantidadMinima": 0,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1298,14 +1369,14 @@
     "Categoria": "Medicamentos de emergencia",
     "SubCategoria": "Benzodiacepinas",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 4,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1317,8 +1388,8 @@
     "NombreVisible": "Jeringa 10 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1331,8 +1402,8 @@
     "NombreVisible": "Rollos de gasa",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1345,8 +1416,8 @@
     "NombreVisible": "Jeringa con atomizador nasal",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1358,16 +1429,16 @@
     "id": 151699,
     "NombreVisible": "Dexketoprofeno (Trometamol) 50mg/2ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Analg√©sicos",
+    "SubCategoria": "AnalgÈsicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1376,8 +1447,8 @@
   },
   {
     "id": 171479,
-    "NombreVisible": "Cintur√≥n Ara√±a Adulto",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "NombreVisible": "CinturÛn AraÒa Adulto",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "2 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -1391,10 +1462,10 @@
   },
   {
     "id": 278695,
-    "NombreVisible": "Kit de Cricotiroidotom√≠a descartable",
+    "NombreVisible": "Kit de CricotiroidotomÌa descartable",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 1,
     "CantidadMinima": 0,
@@ -1421,7 +1492,7 @@
   },
   {
     "id": 205740,
-    "NombreVisible": "Espaciadores adulto y pedi√°trico",
+    "NombreVisible": "Espaciadores adulto y pedi·trico",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
     "Ubicacion": "4 Compartimento Mueble",
@@ -1451,7 +1522,7 @@
   },
   {
     "id": 224932,
-    "NombreVisible": "S√°banas",
+    "NombreVisible": "S·banas",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
     "Ubicacion": "13 Compartimento Mueble",
@@ -1466,8 +1537,8 @@
   },
   {
     "id": 193697,
-    "NombreVisible": "Cintur√≥n Ara√±a Pedi√°trico",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "NombreVisible": "CinturÛn AraÒa Pedi·trico",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "1 Compartimento mueble",
     "tipoCampo": "NoDefinido",
@@ -1482,14 +1553,20 @@
   {
     "id": 306585,
     "NombreVisible": "Clonazepam frasco gotas 2,5mg/ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
+    "Categoria": "Medicamentos del botiquÌn",
     "SubCategoria": "Benzodiacepinas",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1511,17 +1588,17 @@
   {
     "id": 319133,
     "NombreVisible": "Tramadol  100mg/2ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Analg√©sicos",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "AnalgÈsicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1531,14 +1608,20 @@
   {
     "id": 280919,
     "NombreVisible": "Clorfenamina  10mg/ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Antihistam√≠nicos",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "AntihistamÌnicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1547,8 +1630,8 @@
     "NombreVisible": "Marcador Permanente",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1559,7 +1642,7 @@
   {
     "id": 108021,
     "NombreVisible": "Anaconda",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "14 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -1576,8 +1659,8 @@
     "NombreVisible": "Jeringa 5 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1602,15 +1685,21 @@
   },
   {
     "id": 242913,
-    "NombreVisible": "Acetaminof√©n  1g/100ml",
+    "NombreVisible": "AcetaminofÈn  1g/100ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Analg√©sicos",
+    "SubCategoria": "AnalgÈsicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -1619,8 +1708,8 @@
     "NombreVisible": "SF 500 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento B del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento B del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1633,8 +1722,8 @@
     "NombreVisible": "SF 100 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento B del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento B del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1647,8 +1736,8 @@
     "NombreVisible": "Jeringa 20 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1658,8 +1747,8 @@
   },
   {
     "id": 315394,
-    "NombreVisible": "Juego f√©rulas r√≠gidas Adulto",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "NombreVisible": "Juego fÈrulas rÌgidas Adulto",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "15 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -1673,11 +1762,11 @@
   },
   {
     "id": 293450,
-    "NombreVisible": "Venda Cob√°n",
+    "NombreVisible": "Venda Cob·n",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1704,7 +1793,7 @@
     "id": 129589,
     "NombreVisible": "Dimenhidrinato",
     "Categoria": "Medicamentos orales",
-    "SubCategoria": "Antiem√©ticos",
+    "SubCategoria": "AntiemÈticos",
     "Ubicacion": "Caja Medicamentos #2",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 6,
@@ -1713,7 +1802,7 @@
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1723,7 +1812,7 @@
   },
   {
     "id": 153513,
-    "NombreVisible": "Ox√≠metro de pulso",
+    "NombreVisible": "OxÌmetro de pulso",
     "Categoria": "Equipo de Signos Vitales",
     "SubCategoria": "Equipo",
     "Ubicacion": "Bolso Signos Vitales",
@@ -1738,7 +1827,7 @@
   },
   {
     "id": 251006,
-    "NombreVisible": "Ap√≥sitos no Est√©riles",
+    "NombreVisible": "ApÛsitos no EstÈriles",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
     "Ubicacion": "5 Compartimento Mueble",
@@ -1757,34 +1846,26 @@
     "Categoria": "Medicamentos de emergencia",
     "SubCategoria": "Antiagregante plaquetario",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
-    "DetalleLargo": "",
-    "Imagen": ""
-  },
-  {
-    "id": 113823,
-    "NombreVisible": "Cat√©ter IV #18",
-    "Categoria": "Terapia IV / IM",
-    "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
-    "CantidadSugerida": 3,
-    "CantidadMinina": 1,
-    "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
   {
     "id": 245691,
     "NombreVisible": "Pinzas Magill",
-    "Categoria": "Equipo de intubaci√≥n",
+    "Categoria": "Equipo de intubaciÛn",
     "SubCategoria": "Equipo",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 2,
     "CantidadMinima": 0,
@@ -1828,16 +1909,16 @@
     "id": 155359,
     "NombreVisible": "Verapamilo  5mg/2ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Antiarr√≠tmicos",
+    "SubCategoria": "AntiarrÌtmicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1848,16 +1929,16 @@
     "id": 116903,
     "NombreVisible": "Sulfato de Magnesio  200mg/10ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Antiarr√≠tmicos",
+    "SubCategoria": "AntiarrÌtmicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 4,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1885,14 +1966,14 @@
     "Categoria": "Medicamentos de emergencia",
     "SubCategoria": "Antianginoso",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1904,8 +1985,8 @@
     "NombreVisible": "Pads de alcohol",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 10,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1917,16 +1998,16 @@
     "id": 213023,
     "NombreVisible": "Adrenalina  1mg/ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Agonista adren√©rgico",
+    "SubCategoria": "Agonista adrenÈrgico",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 10,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -1938,8 +2019,8 @@
     "NombreVisible": "Aguja # 18",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -1952,19 +2033,18 @@
     "NombreVisible": "Rollos de gasa",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "5 Compartimento Mueble",
+    "Ubicacion": "8 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 6,
     "CantidadMinima": 0,
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": "",
-    "CantidadMinina": null
+    "Imagen": ""
   },
   {
     "id": 113408,
-    "NombreVisible": "Mascarillas P/Nebulizar Pedi√°trica",
+    "NombreVisible": "Mascarillas P/Nebulizar Pedi·trica",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Descartable",
     "Ubicacion": "4 Compartimento Mueble",
@@ -1979,10 +2059,10 @@
   },
   {
     "id": 319083,
-    "NombreVisible": "Bater√≠as de repuesto",
-    "Categoria": "Equipo de intubaci√≥n",
+    "NombreVisible": "BaterÌas de repuesto",
+    "Categoria": "Equipo de intubaciÛn",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 2,
     "CantidadMinima": 0,
@@ -1995,7 +2075,7 @@
   {
     "id": 241137,
     "NombreVisible": "Camilla plegable de lona",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "15 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -2054,7 +2134,7 @@
   },
   {
     "id": 146266,
-    "NombreVisible": "C√°nulas Nasal Pedi√°trico",
+    "NombreVisible": "C·nulas Nasal Pedi·trico",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Descartable",
     "Ubicacion": "4 Compartimento Mueble",
@@ -2072,8 +2152,8 @@
     "NombreVisible": "Rollos de gasa",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Botiqu√≠n de control de sangrados",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "BotiquÌn de control de sangrados",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2098,10 +2178,10 @@
   },
   {
     "id": 163002,
-    "NombreVisible": "Mascarillas lar√≠ngeas",
+    "NombreVisible": "Mascarillas larÌngeas",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 2,
     "CantidadMinima": 0,
@@ -2113,7 +2193,7 @@
   },
   {
     "id": 256805,
-    "NombreVisible": "Cat√©ter de Succi√≥n",
+    "NombreVisible": "CatÈter de SucciÛn",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Equipo",
     "Ubicacion": "1 Compartimento mueble",
@@ -2143,18 +2223,18 @@
   },
   {
     "id": 173777,
-    "NombreVisible": "N-acetilciste√≠na 600mg",
+    "NombreVisible": "N-acetilcisteÌna 600mg",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Ant√≠doto",
+    "SubCategoria": "AntÌdoto",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 10,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -2166,8 +2246,8 @@
     "NombreVisible": "Contenedor de agujas",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2180,8 +2260,8 @@
     "NombreVisible": "Jeringa 50 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2191,11 +2271,11 @@
   },
   {
     "id": 115051,
-    "NombreVisible": "S√°bana T√©rmica",
+    "NombreVisible": "S·bana TÈrmica",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2205,11 +2285,11 @@
   },
   {
     "id": 143395,
-    "NombreVisible": "Ap√≥sito de trauma",
+    "NombreVisible": "ApÛsito de trauma",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2234,26 +2314,25 @@
   },
   {
     "id": 179313,
-    "NombreVisible": "Mascarilla quir√∫rgica",
+    "NombreVisible": "Mascarilla quir˙rgica",
     "Categoria": "EPP y Ropa descartable Ambulancia",
     "SubCategoria": "Descartable",
-    "Ubicacion": "7 compartimento Mueble",
+    "Ubicacion": "8 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 12,
     "CantidadMinima": 0,
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": "",
-    "CantidadMinina": null
+    "Imagen": ""
   },
   {
     "id": 144635,
-    "NombreVisible": "Mascarilla Quir√∫rgica",
+    "NombreVisible": "Mascarilla Quir˙rgica",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2265,7 +2344,7 @@
     "id": 170178,
     "NombreVisible": "Ibuprofeno",
     "Categoria": "Medicamentos orales",
-    "SubCategoria": "Analg√©sicos",
+    "SubCategoria": "AnalgÈsicos",
     "Ubicacion": "Caja Medicamentos #2",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 6,
@@ -2274,7 +2353,7 @@
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -2314,22 +2393,21 @@
   },
   {
     "id": 264208,
-    "NombreVisible": "Venda el√°stica",
+    "NombreVisible": "Venda el·stica",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "5 Compartimento Mueble",
+    "Ubicacion": "8 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 3,
     "CantidadMinima": 0,
     "Estado": "Disponible",
     "Opcionales": {},
     "DetalleLargo": "",
-    "Imagen": "",
-    "CantidadMinina": null
+    "Imagen": ""
   },
   {
     "id": 290870,
-    "NombreVisible": "Ap√≥sitos 4x4 Est√©riles",
+    "NombreVisible": "ApÛsitos 4x4 EstÈriles",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
     "Ubicacion": "5 Compartimento Mueble",
@@ -2359,11 +2437,11 @@
   },
   {
     "id": 112943,
-    "NombreVisible": "Ap√≥sito 4x4 Est√©riles",
+    "NombreVisible": "ApÛsito 4x4 EstÈriles",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 30,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2376,8 +2454,8 @@
     "NombreVisible": "Dextrosa al 50% 500 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento B del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento B del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2387,11 +2465,11 @@
   },
   {
     "id": 232713,
-    "NombreVisible": "Aguja intra√≥sea 15 mm",
+    "NombreVisible": "Aguja intraÛsea 15 mm",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2418,16 +2496,16 @@
     "id": 172924,
     "NombreVisible": "Morfina  15mg/ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Analg√©sicos",
+    "SubCategoria": "AnalgÈsicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -2452,17 +2530,17 @@
   {
     "id": 181401,
     "NombreVisible": "Dimenhidrinato 50mg/ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Antiem√©ticos",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "AntiemÈticos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 2,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -2474,8 +2552,8 @@
     "NombreVisible": "Caja de medicamentos",
     "Categoria": "Otros",
     "SubCategoria": "Equipo",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2485,7 +2563,7 @@
   },
   {
     "id": 199893,
-    "NombreVisible": "C√°nulas Nasal Adulto",
+    "NombreVisible": "C·nulas Nasal Adulto",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Equipo",
     "Ubicacion": "4 Compartimento Mueble",
@@ -2503,8 +2581,8 @@
     "NombreVisible": "Jeringa 1 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2517,7 +2595,7 @@
     "NombreVisible": "Espadrapo",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 1,
     "CantidadMinima": 0,
@@ -2528,22 +2606,8 @@
     "CantidadMinina": null
   },
   {
-    "id": 275711,
-    "NombreVisible": "Cat√©ter IV #14",
-    "Categoria": "Terapia IV / IM",
-    "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
-    "CantidadSugerida": 3,
-    "CantidadMinina": 1,
-    "Estado": "Disponible",
-    "Opcionales": {},
-    "DetalleLargo": "",
-    "Imagen": ""
-  },
-  {
     "id": 331959,
-    "NombreVisible": "Ap√≥sito de Trauma",
+    "NombreVisible": "ApÛsito de Trauma",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
     "Ubicacion": "7 compartimento Mueble",
@@ -2558,7 +2622,7 @@
   },
   {
     "id": 113520,
-    "NombreVisible": "Gluc√≥metro con tiras reactiva",
+    "NombreVisible": "GlucÛmetro con tiras reactiva",
     "Categoria": "Equipo de Signos Vitales",
     "SubCategoria": "Equipo",
     "Ubicacion": "Bolso Signos Vitales",
@@ -2575,19 +2639,25 @@
     "id": 333042,
     "NombreVisible": "Dopamina  200mg/5ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Antiarr√≠tmicos",
+    "SubCategoria": "AntiarrÌtmicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
   {
     "id": 123760,
-    "NombreVisible": "Sabana T√©rmica",
+    "NombreVisible": "Sabana TÈrmica",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
     "Ubicacion": "8 Compartimento Mueble",
@@ -2602,25 +2672,11 @@
   },
   {
     "id": 319735,
-    "NombreVisible": "Ap√≥sitos Hemost√°ticos Chito SAM",
+    "NombreVisible": "ApÛsitos Hemost·ticos Chito SAM",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Botiqu√≠n de control de sangrados",
-    "tipoCampo": "Num√©rico",
-    "CantidadSugerida": 3,
-    "CantidadMinina": 1,
-    "Estado": "Disponible",
-    "Opcionales": {},
-    "DetalleLargo": "",
-    "Imagen": ""
-  },
-  {
-    "id": 111067,
-    "NombreVisible": "Cat√©ter IV #22",
-    "Categoria": "Terapia IV / IM",
-    "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "BotiquÌn de control de sangrados",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2630,7 +2686,7 @@
   },
   {
     "id": 237216,
-    "NombreVisible": "Conexi√≥n de suero",
+    "NombreVisible": "ConexiÛn de suero",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
     "Ubicacion": "3 Compartimento Mueble",
@@ -2661,7 +2717,7 @@
   {
     "id": 307330,
     "NombreVisible": "K.E.D Adulto",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "15 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -2675,8 +2731,8 @@
   },
   {
     "id": 119104,
-    "NombreVisible": "Pa√±uelo Triangular",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "NombreVisible": "PaÒuelo Triangular",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Descartable",
     "Ubicacion": "5 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -2722,16 +2778,16 @@
     "id": 189313,
     "NombreVisible": "Atropina Sulfato  0.5mg/ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Antiarr√≠tmicos",
+    "SubCategoria": "AntiarrÌtmicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 6,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -2740,7 +2796,7 @@
   },
   {
     "id": 329336,
-    "NombreVisible": "Mascarilla Simple pedi√°trica",
+    "NombreVisible": "Mascarilla Simple pedi·trica",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Descartable",
     "Ubicacion": "4 Compartimento Mueble",
@@ -2770,8 +2826,8 @@
   },
   {
     "id": 280783,
-    "NombreVisible": "Camilla telesc√≥pica",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "NombreVisible": "Camilla telescÛpica",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "Modulo De Ambulancia",
     "tipoCampo": "NoDefinido",
@@ -2801,7 +2857,7 @@
   {
     "id": 239810,
     "NombreVisible": "Camilla tipo Scoop",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "16 Compartimento Mueble",
     "tipoCampo": "NoDefinido",
@@ -2819,14 +2875,14 @@
     "Categoria": "Medicamentos de emergencia",
     "SubCategoria": "Broncodilatador",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -2837,7 +2893,7 @@
     "id": 204013,
     "NombreVisible": "Hioscina",
     "Categoria": "Medicamentos orales",
-    "SubCategoria": "Antiespasm√≥dicos",
+    "SubCategoria": "AntiespasmÛdicos",
     "Ubicacion": "Caja Medicamentos #2",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 6,
@@ -2846,7 +2902,7 @@
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -2856,7 +2912,7 @@
   },
   {
     "id": 173600,
-    "NombreVisible": "Esfigmoman√≥metro",
+    "NombreVisible": "EsfigmomanÛmetro",
     "Categoria": "Equipo de Signos Vitales",
     "SubCategoria": "Equipo",
     "Ubicacion": "Bolso Signos Vitales",
@@ -2874,8 +2930,8 @@
     "NombreVisible": "Aguja # 25",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2888,8 +2944,8 @@
     "NombreVisible": "Aguja # 22",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2901,7 +2957,7 @@
     "id": 149874,
     "NombreVisible": "Clorfenamina",
     "Categoria": "Medicamentos orales",
-    "SubCategoria": "Antihistam√≠nicos",
+    "SubCategoria": "AntihistamÌnicos",
     "Ubicacion": "Caja Medicamentos #2",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 6,
@@ -2910,7 +2966,7 @@
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -2923,8 +2979,8 @@
     "NombreVisible": "Sello Heparina",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2935,14 +2991,20 @@
   {
     "id": 236113,
     "NombreVisible": "Diazepam  10mg/2ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
+    "Categoria": "Medicamentos del botiquÌn",
     "SubCategoria": "Benzodiacepinas",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -2951,8 +3013,8 @@
     "NombreVisible": "Torniquete Para IV",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento A del botiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -2962,7 +3024,7 @@
   },
   {
     "id": 250702,
-    "NombreVisible": "Equipo de diagn√≥stico",
+    "NombreVisible": "Equipo de diagnÛstico",
     "Categoria": "Equipo de Signos Vitales",
     "SubCategoria": "Equipo",
     "Ubicacion": "Bolso Signos Vitales",
@@ -2992,10 +3054,10 @@
   },
   {
     "id": 329571,
-    "NombreVisible": "Sujetadores para tubo adulto y pedi√°trico",
-    "Categoria": "Equipo de intubaci√≥n",
+    "NombreVisible": "Sujetadores para tubo adulto y pedi·trico",
+    "Categoria": "Equipo de intubaciÛn",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 1,
     "CantidadMinima": 0,
@@ -3007,23 +3069,29 @@
   },
   {
     "id": 273446,
-    "NombreVisible": "Lidoca√≠na sin preservantes 2%",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Antiarr√≠tmicos",
+    "NombreVisible": "LidocaÌna sin preservantes 2%",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "AntiarrÌtmicos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
   {
     "id": 262629,
-    "NombreVisible": "Acetaminof√©n",
+    "NombreVisible": "AcetaminofÈn",
     "Categoria": "Medicamentos orales",
-    "SubCategoria": "Analg√©sicos",
+    "SubCategoria": "AnalgÈsicos",
     "Ubicacion": "Caja Medicamentos #2",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 6,
@@ -3042,7 +3110,7 @@
   },
   {
     "id": 281656,
-    "NombreVisible": "Cilindro de Ox√≠geno Portable",
+    "NombreVisible": "Cilindro de OxÌgeno Portable",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Descartable",
     "Ubicacion": "Modulo De Ambulancia",
@@ -3058,23 +3126,29 @@
   {
     "id": 298586,
     "NombreVisible": "Midazolam  5mg/5ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
+    "Categoria": "Medicamentos del botiquÌn",
     "SubCategoria": "Benzodiacepinas",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
   {
     "id": 331830,
-    "NombreVisible": "Filtro antiviral (para sistema ventilaci√≥n mec√°nica)",
-    "Categoria": "Equipo de intubaci√≥n",
+    "NombreVisible": "Filtro antiviral (para sistema ventilaciÛn mec·nica)",
+    "Categoria": "Equipo de intubaciÛn",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 2,
     "CantidadMinima": 0,
@@ -3086,7 +3160,7 @@
   },
   {
     "id": 159609,
-    "NombreVisible": "Suero fisiol√≥gico 500 ml",
+    "NombreVisible": "Suero fisiolÛgico 500 ml",
     "Categoria": "Terapia IV / IM",
     "SubCategoria": "Descartable",
     "Ubicacion": "2 Compartimento Mueble",
@@ -3102,14 +3176,20 @@
   {
     "id": 319515,
     "NombreVisible": "Cimetidina  300mg/2ml",
-    "Categoria": "Medicamentos del botiqu√≠n",
-    "SubCategoria": "Anti√°cidos",
+    "Categoria": "Medicamentos del botiquÌn",
+    "SubCategoria": "Anti·cidos",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
-    "Opcionales": {},
+    "Opcionales": {
+      "Opcion1": {
+        "Nombre": "Fecha Vencimiento",
+        "Valor": "01/01/24",
+        "Tipo": "fecha"
+      }
+    },
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -3118,8 +3198,8 @@
     "NombreVisible": "Bolsa Transparente",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -3162,8 +3242,8 @@
     "NombreVisible": "Respirador N95",
     "Categoria": "EPP y Ropa descartable Ambulancia",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -3191,8 +3271,8 @@
     "NombreVisible": "Tijera de Trabajo pesado",
     "Categoria": "Otros",
     "SubCategoria": "Equipo",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -3202,7 +3282,7 @@
   },
   {
     "id": 271052,
-    "NombreVisible": "Ri√±√≥n Acero Inoxidable",
+    "NombreVisible": "RiÒÛn Acero Inoxidable",
     "Categoria": "Control de Sangrados y Curaciones",
     "SubCategoria": "Equipo",
     "Ubicacion": "Anaquel",
@@ -3220,8 +3300,8 @@
     "NombreVisible": "Cold Pack",
     "Categoria": "Otros",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento Central del Botiqu√≠n",
-    "tipoCampo": "Num√©rico",
+    "Ubicacion": "Compartimento Central del BotiquÌn",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 1,
     "CantidadMinina": 1,
     "Estado": "Disponible",
@@ -3233,16 +3313,16 @@
     "id": 167130,
     "NombreVisible": "Naloxona  0.4mg/ml",
     "Categoria": "Medicamentos de emergencia",
-    "SubCategoria": "Ant√≠doto",
+    "SubCategoria": "AntÌdoto",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
@@ -3266,10 +3346,10 @@
   },
   {
     "id": 323916,
-    "NombreVisible": "Tubos Endotraqueales¬†",
+    "NombreVisible": "Tubos Endotraqueales†",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Descartable",
-    "Ubicacion": "Bolso Azul V√≠a Aerea ferno",
+    "Ubicacion": "Bolso Azul VÌa Aerea ferno",
     "tipoCampo": "NoDefinido",
     "CantidadSugerida": 2,
     "CantidadMinima": 0,
@@ -3311,7 +3391,7 @@
   },
   {
     "id": 255176,
-    "NombreVisible": "Nebulizador port√°til",
+    "NombreVisible": "Nebulizador port·til",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Equipo",
     "Ubicacion": "4 Compartimento Mueble",
@@ -3320,7 +3400,7 @@
     "CantidadMinima": 0,
     "Estado": "Disponible",
     "Opcionales": {},
-    "DetalleLargo": "Antibi√≥tico usado para tratar infecciones bacterianas.",
+    "DetalleLargo": "AntibiÛtico usado para tratar infecciones bacterianas.",
     "Imagen": "url_a_im",
     "CantidadMinina": null
   },
@@ -3330,31 +3410,17 @@
     "Categoria": "Medicamentos de emergencia",
     "SubCategoria": "Esteroide",
     "Ubicacion": "Caja de medicamentos",
-    "tipoCampo": "Num√©rico",
+    "tipoCampo": "NumÈrico",
     "CantidadSugerida": 3,
     "CantidadMinina": 1,
     "Estado": "Disponible",
     "Opcionales": {
       "Opcion1": {
         "Nombre": "Fecha Vencimiento",
-        "Tipo": "date",
+        "Tipo": "fecha",
         "Valor": "30/12/2024"
       }
     },
-    "DetalleLargo": "",
-    "Imagen": ""
-  },
-  {
-    "id": 243262,
-    "NombreVisible": "Cat√©ter IV #24",
-    "Categoria": "Terapia IV / IM",
-    "SubCategoria": "Descartable",
-    "Ubicacion": "Compartimento A del botiqu√≠n",
-    "tipoCampo": "Num√©rico",
-    "CantidadSugerida": 3,
-    "CantidadMinina": 1,
-    "Estado": "Disponible",
-    "Opcionales": {},
     "DetalleLargo": "",
     "Imagen": ""
   },
@@ -3376,7 +3442,7 @@
   {
     "id": 1733499612339,
     "NombreVisible": "Inmovilizador de cabeza",
-    "Categoria": "Equipo de Inmovilizaci√≥n",
+    "Categoria": "Equipo de InmovilizaciÛn",
     "SubCategoria": "Equipo",
     "Ubicacion": "1 Compartimento mueble",
     "tipoCampo": "NoDefinido",
@@ -3390,7 +3456,7 @@
   },
   {
     "id": 1733513518865,
-    "NombreVisible": "Ventilado Autom√°tico",
+    "NombreVisible": "Ventilado Autom·tico",
     "Categoria": "Oxigenoterapia",
     "SubCategoria": "Equipo",
     "Ubicacion": "10 Compartimento Mueble",
@@ -3410,12 +3476,12 @@
         "Tipo": "checkbox"
       },
       "Opcion3": {
-        "Nombre": "Cable Alimentaci√≥n El√©ctrico",
+        "Nombre": "Cable AlimentaciÛn ElÈctrico",
         "Valor": false,
         "Tipo": "checkbox"
       },
       "Opcion4": {
-        "Nombre": "Manguera abasto de ox√≠geno",
+        "Nombre": "Manguera abasto de oxÌgeno",
         "Valor": false,
         "Tipo": "checkbox"
       }
