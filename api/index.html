@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prueba Neon DB</title>
+</head>
+<body>
+  <h1>Prueba de conexión a Neon PostgreSQL</h1>
+  <button id="testBtn">Probar Conexión</button>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('testBtn').addEventListener('click', async () => {
+      try {
+        const response = await fetch('/api/db-test');
+        const data = await response.json();
+        
+        if (data.error) {
+          document.getElementById('result').innerHTML = `
+            <p style="color: red;">Error: ${data.error}</p>
+            <p>${data.detalles}</p>
+          `;
+        } else {
+          document.getElementById('result').innerHTML = `
+            <p style="color: green;">${data.message}</p>
+            <p>Hora en la BD: ${new Date(data.hora).toLocaleString()}</p>
+          `;
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrección de Texto JSON</title>
+    <script src="https://cdn.jsdelivr.net/npm/typo-js@1.2.5/typo.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: auto;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            margin-top: 10px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Corrección Automática de Texto</h2>
+        <input type="file" id="fileInput" accept=".json">
+        <button onclick="procesarArchivo()">Corregir Texto</button>
+        <textarea id="output" placeholder="Texto corregido aparecerá aquí..." readonly></textarea>
+        <button onclick="descargarArchivo()">Descargar JSON</button>
+    </div>
+
+    <script>
+        let jsonData = null; // Variable para almacenar los datos JSON
+        let dictionary = null; // Diccionario para la corrección ortográfica
+
+        // Cargar el diccionario de forma asincrónica
+        function cargarDiccionario(callback) {
+            if (typeof Typo === 'undefined') {
+                alert('La librería Typo.js no se ha cargado correctamente.');
+                return;
+            }
+
+            dictionary = new Typo("es_ES", null, null, {
+                async: true,
+                loaded: callback
+            });
+        }
+
+        // Función que se ejecuta cuando el diccionario está cargado
+        function diccionarioCargado() {
+            console.log("Diccionario cargado con éxito.");
+        }
+
+        // Cargar el diccionario al cargar la página
+        window.onload = function() {
+            cargarDiccionario(diccionarioCargado);
+        };
+
+        async function procesarArchivo() {
+            const fileInput = document.getElementById('fileInput');
+            const output = document.getElementById('output');
+
+            if (!fileInput.files.length) {
+                alert("Por favor, selecciona un archivo JSON.");
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                try {
+                    let rawText = event.target.result;
+
+                    console.log("Contenido del archivo leído:", rawText);
+
+                    // Esperar a que el diccionario esté cargado antes de procesar el archivo
+                    if (!dictionary) {
+                        alert("El diccionario no está cargado aún. Por favor, espera...");
+                        return;
+                    }
+
+                    // Intentar corregir la codificación
+                    rawText = corregirCodificacion(rawText);
+                    console.log("Texto después de corregir la codificación:", rawText);
+
+                    jsonData = JSON.parse(rawText); // Aquí podría fallar si el JSON no es válido
+                    console.log("JSON procesado correctamente:", jsonData);
+                    
+                    // Corregir el JSON recursivamente
+                    jsonData = corregirJSON(jsonData);
+
+                    // Mostrar los resultados en el textarea
+                    output.value = JSON.stringify(jsonData, null, 2);
+                } catch (error) {
+                    console.error("Error al procesar el archivo:", error); 
+                    alert("Error al procesar el archivo. Asegúrate de que el JSON tiene el formato correcto.");
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // Función recursiva para corregir texto en todo el JSON
+        function corregirJSON(data) {
+            if (Array.isArray(data)) {
+                return data.map(item => corregirJSON(item)); // Si es un array, aplicar recursión a cada elemento
+            } else if (typeof data === 'object' && data !== null) {
+                // Si es un objeto, aplicar recursión a cada valor de las claves
+                for (let key in data) {
+                    if (typeof data[key] === 'string') {
+                        data[key] = corregirTexto(data[key]); // Corregir solo si el valor es texto
+                    } else if (typeof data[key] === 'object') {
+                        data[key] = corregirJSON(data[key]); // Recursión en objetos anidados
+                    }
+                }
+                return data;
+            }
+            return data; // Retornar los valores que no sean texto ni objetos
+        }
+
+        function corregirTexto(texto) {
+            if (!dictionary) {
+                console.error("El diccionario no está cargado.");
+                return texto; // Si el diccionario no está listo, retornar el texto original
+            }
+            
+            return texto.split(' ').map(word => {
+                if (!dictionary.check(word)) {
+                    const suggestions = dictionary.suggest(word);
+                    return suggestions.length ? suggestions[0] : word;
+                }
+                return word;
+            }).join(' ');
+        }
+
+        function corregirCodificacion(text) {
+            try {
+                return new TextDecoder("utf-8").decode(new TextEncoder().encode(text));
+            } catch (error) {
+                console.error("Error al corregir la codificación:", error);
+                return text; // Retornar el texto original si no se pudo corregir
+            }
+        }
+
+        function descargarArchivo() {
+            if (!jsonData) {
+                alert("No hay datos corregidos para descargar.");
+                return;
+            }
+
+            const blob = new Blob([JSON.stringify(jsonData, null, 2)], { type: "application/json" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "texto_corregido.json";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+
+</body>
+</html>

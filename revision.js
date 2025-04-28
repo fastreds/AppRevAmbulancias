@@ -520,10 +520,6 @@ function showLocationItems(location) {
 }
 
 
-
-
-
-
   /////genera la estructura inicial 
   function initializeReviewData() {
     reviewData.items = items.map(item => ({
